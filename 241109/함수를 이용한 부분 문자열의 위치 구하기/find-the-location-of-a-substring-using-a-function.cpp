@@ -11,16 +11,19 @@ int main() {
     cin >> substr;
 
     int ans = -1;
-
-    for(int i = 0 ; i < targetstr.size()-1 ; i++)
+    int cnt = 0;
+    for(int i = 0 ; i < targetstr.size() ; i++)
     {
         for(int j = 0 ; j < substr.size() ; j++)
         {
-            if(targetstr[i] == substr[j] && targetstr[i+1] == substr[j+1] ) ans = i;
+            if(targetstr[i] == substr[j]) cnt++;
+            if(cnt = substr.size()){
+                ans = i-substr.size()+1;
+            }
         }
     }
-
-    cout << ans;
+    
+    cout << ans ;
 
 
     return 0;
