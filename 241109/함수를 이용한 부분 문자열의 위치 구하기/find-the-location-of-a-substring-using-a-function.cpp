@@ -13,7 +13,10 @@ int main() {
     int ans =-1;
     for(int i = 0 ; i < targetstr.size() ; i++)
     {
-        if( targetstr.substr(i,i+sbstr.size()) == sbstr) ans = i;
+        if( targetstr.substr(i,i+sbstr.size()) == sbstr) {
+            ans = i;
+            break;
+        }
     }
 
 
