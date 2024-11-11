@@ -2,7 +2,7 @@
 using namespace std;
 
 
-
+int n; 
 void sol(int n)
 {
     if(n == 0) return ;
