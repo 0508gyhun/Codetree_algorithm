@@ -17,7 +17,7 @@ int main() {
     sort(s1.begin(), s1.end());
     sort(s2.begin(), s2.end());
 
-    for(int i = 0 ; i < max(s1.size(), s2.size()) ; i++)
+    for(int i = 0 ; i < min(s1.size(), s2.size()) ; i++)
     {
         if(s2[i] != s2[i]){
             cout <<"No";
