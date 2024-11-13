@@ -23,7 +23,7 @@ int main() {
             day = 1;
         }
     }
-    cout <<totalday ; 
+    cout <<totalday+1 ; 
 
 
     // 여기에 코드를 작성해주세요.
