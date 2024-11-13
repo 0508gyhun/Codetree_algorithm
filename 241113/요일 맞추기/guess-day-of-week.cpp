@@ -23,10 +23,10 @@ int main() {
     int m1,d1,m2,d2;
     cin >> m1 >> d1 >> m2>> d2;
     
-    int res = (howmanydays(m2,d2) - howmanydays(m1,d1));
-   // cout << res<< endl;
+    int res = (howmanydays(m2,d2) - howmanydays(m1,d1))-1;
+    //cout << res<< endl;
     res = res%7;
-   // cout << res<< endl;
+    //cout << res<< endl;
 
 
     int currentidx = 8;
