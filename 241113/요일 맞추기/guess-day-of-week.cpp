@@ -9,7 +9,7 @@ int howmanydays(int m, int d)
 {
     int total = 0 ;
 
-    for(int i = 1 ; i <= m ; i++)
+    for(int i = 1 ; i < m ; i++)
     {
         total += day_month[i];
     }
