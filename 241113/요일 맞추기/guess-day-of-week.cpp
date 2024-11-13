@@ -24,13 +24,13 @@ int main() {
     cin >> m1 >> d1 >> m2>> d2;
     
     int res = (howmanydays(m2,d2) - howmanydays(m1,d1));
-    cout << res<< endl;
+   // cout << res<< endl;
     res = res%7;
-    cout << res<< endl;
+   // cout << res<< endl;
 
 
     int currentidx = 8;
-    int ansidx = currentidx+res;
+    int ansidx = currentidx+res-1;
     
 
     cout << week[ansidx];
