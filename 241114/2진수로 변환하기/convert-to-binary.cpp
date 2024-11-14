@@ -20,7 +20,7 @@ int main() {
     //cout << endl;
     for(int i = cnt-1 ; i >= 0 ; i--)
     {
-        cout << ans[i]<<" ";
+        cout << ans[i];
     }
     return 0;
 }
