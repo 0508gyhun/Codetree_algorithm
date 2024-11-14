@@ -17,7 +17,7 @@ int main() {
     int cnt = 0;
     while(1)
     {
-        cout << num <<" ";
+        //cout << num <<" ";
         if(num<2)
         {
             ans[cnt++] = num;
@@ -26,7 +26,7 @@ int main() {
         ans[cnt++] = num%2;
         num = num/2;
     }
-    cout << endl;
+//    cout << endl;
 
 
     for(int i = cnt-1 ; i >= 0 ; i--)
