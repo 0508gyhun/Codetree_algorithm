@@ -13,19 +13,21 @@ int main() {
         num = num*2 + s[i]-'0';
     }
     num = num*17;
-
     int ans[num] ; 
     int cnt = 0;
     while(1)
     {
-        if(num>2)
+        cout << num <<" ";
+        if(num<2)
         {
             ans[cnt++] = num;
             break;
         }
-        ans[cnt++] = n%2;
-        n = n/2;
+        ans[cnt++] = num%2;
+        num = num/2;
     }
+    cout << endl;
+
 
     for(int i = cnt-1 ; i >= 0 ; i--)
     {
