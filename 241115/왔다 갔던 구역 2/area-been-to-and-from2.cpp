@@ -26,7 +26,7 @@ int main() {
                 }
                 else
                 {
-                    aL[-j]++;
+                    aL[j+1000]++;
                 }
             }
             st = st+num;
@@ -41,7 +41,7 @@ int main() {
                 }
                 else
                 {
-                    aL[-j]++;
+                    aL[j+1000]++;
                 }
             }
             st = st-num;
@@ -49,7 +49,7 @@ int main() {
 
     }
     int cnt = 0 ;
-    for(int i = 0 ; i < 1000 ; i++)
+    for(int i = 0 ; i < 2000 ; i++)
     {
         if(aR[i] >= 2) cnt++;
         
