@@ -29,7 +29,7 @@ int main() {
                     aL[-j]++;
                 }
             }
-            st = st+num;
+            st = st+num+1;
         }
         else if ( dir == 'L')
         {
@@ -44,7 +44,7 @@ int main() {
                     aL[-j]++;
                 }
             }
-            st = st-num;
+            st = st-num-1;
         }
 
     }
