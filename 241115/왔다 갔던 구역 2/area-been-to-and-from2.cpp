@@ -48,7 +48,7 @@ int main() {
         }
 
     }
-    int ans = 0 ;
+    int cnt = 0 ;
     for(int i = 0 ; i < 100 ; i++)
     {
         if(aR[i] >= 2) cnt++;
@@ -60,6 +60,7 @@ int main() {
     {
        if(aL[i] >= 2) cnt++;
     }
+    cout << cnt ;
     // 여기에 코드를 작성해주세요.
     return 0;
 }
