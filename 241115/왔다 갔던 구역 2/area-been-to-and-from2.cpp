@@ -4,8 +4,8 @@ using namespace std;
 int num,n;
 char dir;
 
-int aR[100];
-int aL[100];
+int aR[1000];
+int aL[1000];
 int main() {
 
 
@@ -49,14 +49,14 @@ int main() {
 
     }
     int cnt = 0 ;
-    for(int i = 0 ; i < 100 ; i++)
+    for(int i = 0 ; i < 1000 ; i++)
     {
         if(aR[i] >= 2) cnt++;
         
     }
    
 
-    for(int i = 0 ; i < 100 ; i++)
+    for(int i = 0 ; i < 1000 ; i++)
     {
        if(aL[i] >= 2) cnt++;
     }
