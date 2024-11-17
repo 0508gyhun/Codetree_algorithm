@@ -16,9 +16,9 @@ int main() {
 
         cin >> x1>>y1>>x2>>y2;
 
-        for(int j = x1 ; j< x2 ; j++)
+        for(int j = y1 ; j< y2 ; j++)
         {
-            for(int p = y1 ; p< y2 ; p++)
+            for(int p = x1 ; p< x2 ; p++)
             {
                 a[j+100][p+100] = 1;
             }
