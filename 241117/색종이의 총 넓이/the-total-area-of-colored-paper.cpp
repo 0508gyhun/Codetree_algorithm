@@ -8,7 +8,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int cnt = 0 ;
     cin >> n ; 
-    for(int i = 0 ; i < n; i ++)
+    for(int i = 0 ; i < n; i ++) // mx 100
     {
         int x1,y1,x2,y2;
 
@@ -18,12 +18,12 @@ int main() {
         y2 = y1+8;   
         
 
-        for(int j = y1 ; j <y2 ; j++)
+        for(int j = y1 ; j <y2 ; j++) //mx 200
         {
-            for(int p = x1 ; p< x2 ; p++)
+            for(int p = x1 ; p< x2 ; p++) // 100 00 00
             {
-                if(a[j][p] == 1) continue;
-                a[j][p] = 1;
+                if(a[j+100][p+100] == 1) continue;
+                a[j+100][p+100] = 1;
                 cnt++;
             }
         }
