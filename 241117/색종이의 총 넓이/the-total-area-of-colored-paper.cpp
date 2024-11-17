@@ -6,7 +6,7 @@ int a[204][204];
 
 int main() {
     // 여기에 코드를 작성해주세요.
-
+    int cnt = 0 ;
     cin >> n ; 
     for(int i = 0 ; i < n; i ++)
     {
@@ -22,19 +22,21 @@ int main() {
         {
             for(int p = x1 ; p< x2 ; p++)
             {
+                if(a[j][p] == 1) continue;
                 a[j][p] = 1;
+                cnt++;
             }
         }
-        
     }
-    int cnt = 0 ;
-    for(int i = 0 ; i < 204 ; i++)
-    {
-        for(int j = 0 ; j < 204 ; j++)
-        {
-            if(a[i][j] ==1) cnt++;
-        }
-    }
+    
+    // int cnt = 0 ;
+    // for(int i = 0 ; i < 204 ; i++)
+    // {
+    //     for(int j = 0 ; j < 204 ; j++)
+    //     {
+    //         if(a[i][j] ==1) cnt++;
+    //     }
+    // }
 
     cout << cnt;
     
