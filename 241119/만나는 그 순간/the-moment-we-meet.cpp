@@ -83,7 +83,8 @@ int main() {
      a[time]=cur;
 
     int ans = -1;
-    for(int i = 1 ; i <= cur ; i++)
+    cout << cur<< endl;
+    for(int i = 1 ; i <= cur+1 ; i++)
     {
         if(a[i] == b[i]){
             ans = i;
