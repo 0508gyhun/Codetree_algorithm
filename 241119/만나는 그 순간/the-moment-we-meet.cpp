@@ -46,7 +46,7 @@ int main() {
      a[time]=cur;
 
     
-    //for(int i = 0 ; i <= 17 ; i++) cout << a[i]<<" ";    
+    // for(int i = 0 ; i <= cur ; i++) cout << a[i]<<" ";    
 
 
     cur = 0;
@@ -82,9 +82,14 @@ int main() {
     }
      a[time]=cur;
 
+    // cout << endl;
+    // for(int i = 0 ; i <= cur ; i++) cout << b[i]<<" ";    
+
+
     int ans = -1;
-    cout << cur<< endl;
-    for(int i = 1 ; i <= cur+1 ; i++)
+    // cout << endl;
+    // cout << cur<< endl;
+    for(int i = 1 ; i <= time ; i++)
     {
         if(a[i] == b[i]){
             ans = i;
