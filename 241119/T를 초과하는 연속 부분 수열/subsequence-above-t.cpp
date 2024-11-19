@@ -22,8 +22,12 @@ int main() {
         if(i == 0 && a[i]>t || a[i-1]>t && a[i]>t){
             cnt++;
         }
-        else{
+        else if(a[i] > t){
             cnt=1;
+        }
+        else
+        {
+            cnt = 0 ;
         }
         ans = max(ans,cnt);
     }
