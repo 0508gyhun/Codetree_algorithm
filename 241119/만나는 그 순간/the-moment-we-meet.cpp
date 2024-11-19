@@ -82,15 +82,16 @@ int main() {
     }
      a[time]=cur;
 
-   
+    int ans = -1;
     for(int i = 1 ; i <= 1000004 ; i++)
     {
         if(a[i] == b[i]){
-            cout << i;
+            ans = i;
             break;
         }
     }    
 
+    cout << ans;
 
 
 
