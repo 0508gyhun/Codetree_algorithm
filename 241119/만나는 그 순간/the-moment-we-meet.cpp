@@ -83,7 +83,7 @@ int main() {
      a[time]=cur;
 
     int ans = -1;
-    for(int i = 1 ; i <= 1000004 ; i++)
+    for(int i = 1 ; i <= cur ; i++)
     {
         if(a[i] == b[i]){
             ans = i;
