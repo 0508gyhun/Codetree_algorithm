@@ -80,7 +80,7 @@ int main() {
 
         }
     }
-     a[time]=cur;
+     b[time]=cur;
 
     // cout << endl;
     // for(int i = 0 ; i <= cur ; i++) cout << b[i]<<" ";    
