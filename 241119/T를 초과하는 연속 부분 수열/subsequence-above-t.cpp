@@ -19,11 +19,10 @@ int main() {
 
     for(int i = 0 ; i < n ; i ++)
     {
-        if(i == 0 && a[i]>t || a[i-1]>t && a[i]>t){
-            cnt++;
-        }
-        else if(a[i] > t){
-            cnt=1;
+        if(a[i]>t)
+        {
+            if(i ==0  || a[i-1]>t ) cnt++;
+            else cnt = 1;
         }
         else
         {
@@ -31,7 +30,6 @@ int main() {
         }
         ans = max(ans,cnt);
     }
-    if(ans == 1) cout << 0;
-    else cout << ans;
+    cout << ans;
     return 0;
 }
