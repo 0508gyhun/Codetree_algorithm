@@ -27,6 +27,7 @@ int main() {
             cnt = 1;
         }
     }
+    v.push_back(cnt);
 
     int ans  = *max_element(v.begin(), v.end());
 
