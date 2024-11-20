@@ -15,7 +15,7 @@ int main() {
 
         a[num]++;
 
-        if(a[num] >= k-1)
+        if(a[num] >= k)
         {
             ans = num;
         }
