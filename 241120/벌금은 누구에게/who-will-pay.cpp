@@ -18,6 +18,7 @@ int main() {
         if(a[num] >= k)
         {
             ans = num;
+            break;
         }
     }
     cout << ans;
