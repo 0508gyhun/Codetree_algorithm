@@ -66,7 +66,7 @@ int main() {
     // a=1,b=2,ab=3;
     int cnt = 0 ;
     int leader = 0 ;
-    for(int i = 1 ; i <= bcur ; i++)
+    for(int i = 1 ; i <= mmx ; i++)
     {
         if(a[i] > b[i]){
             if(leader != 1) {
