@@ -64,34 +64,27 @@ int main() {
     // }
 
     // a=1,b=2,ab=3;
-    int cnt = 0 ;
-    int leader = 0 ;
-    for(int i = 1 ; i <= mmx ; i++)
-    {
-        if(a[i] > b[i]){
-            if(leader != 1) {
-                cnt++;
-              //  cout << i << endl;
-            }
-            leader = 1;
+   int changes = 0;
+    int currentLeader = 0;  // 0: 초기상태, 1: A리더, 2: B리더, 3: 동률
+    
+    for(int i = 1; i <= acur; i++) {
+        int newLeader;
+        if(a[i] > b[i]) {
+            newLeader = 1;
         }
-        else if( a[i] < b[i])
-        {
-            if(leader != 2) {
-                cnt++;
-              //  cout << i << endl;
-            }
-            leader = 2;
+        else if(a[i] < b[i]) {
+            newLeader = 2;
         }
-        else if ( a[i] == b[i])
-        {
-            if(leader != 3) {
-                cnt++;
-              //  cout << i << endl;
-            }
-            leader =3;
+        else {
+            newLeader = 3;
+        }
+        
+        if(newLeader != currentLeader) {
+            changes++;
+            currentLeader = newLeader;
         }
     }
-    cout << cnt;
+    
+    cout << changes;
     return 0;
 }
