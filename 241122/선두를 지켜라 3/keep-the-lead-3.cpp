@@ -49,10 +49,24 @@ int main() {
     if(acur>bcur) mmx = acur;
     else mmx = bcur;
 
+    if(acur>bcur)
+    {
+        for(int i = bcur ; i < acur ; i++)
+        {
+            a[i] = a[i-1];
+        }
+    }
+    else{
+        for(int i = acur ; i < bcur ; i++)
+        {
+            b[i] = b[i-1];
+        }
+    }
+
     // a=1,b=2,ab=3;
     int cnt = 0 ;
     int leader = 0 ;
-    for(int i = 1 ; i < bcur ; i++)
+    for(int i = 1 ; i < mmx ; i++)
     {
         if(a[i] > b[i]){
             if(leader != 1) {
