@@ -26,8 +26,8 @@ int main() {
         }
         else if( s[i] == 'F')
         {
-            y = y+ dy[i];
-            x = x+ dx[i];
+            y = y+ dy[dir];
+            x = x+ dx[dir];
         }
     }
     cout << y<< " "<< x;
