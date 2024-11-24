@@ -18,7 +18,7 @@ int main() {
     {
         if(s[i] == 'L')
         {
-            dir = (dir-1)%4;
+            dir = (dir-1+4)%4;
         }
         else if( s[i] == 'R')
         {
