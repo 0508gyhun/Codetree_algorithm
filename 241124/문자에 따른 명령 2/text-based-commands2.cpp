@@ -26,11 +26,11 @@ int main() {
         }
         else if( s[i] == 'F')
         {
-            ny = y+ dy[i];
-            nx = x+ dx[i];
+            y = y+ dy[i];
+            x = x+ dx[i];
         }
     }
-    cout << ny<< " "<< nx;
+    cout << y<< " "<< x;
     
     
     return 0;
