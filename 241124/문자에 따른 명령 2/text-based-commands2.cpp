@@ -30,7 +30,7 @@ int main() {
             x = x+ dx[dir];
         }
     }
-    cout << y<< " "<< x;
+    cout << x<< " "<< y;
     
     
     return 0;
