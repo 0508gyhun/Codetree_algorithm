@@ -11,8 +11,8 @@ int getNum(char d)
 {
     if(d == 'L') return 3;
     else if( d == 'R') return 0;
-    else if (d == 'D') return 2;
-    else if (d == 'U') return 1;
+    else if (d == 'D') return 1;
+    else if (d == 'U') return 2;
 }
 
 
