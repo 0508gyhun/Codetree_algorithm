@@ -29,7 +29,7 @@ int main() {
     int y = r-1;
     int x = c-1;
 
-     cout << y << " "<< x<<endl;
+    // cout << y << " "<< x<<endl;
    
     
     for(int i = 0 ; i < t ; i++)
@@ -44,7 +44,7 @@ int main() {
         }
         y = ny;
         x = nx;
-        cout <<i<<" "<< y << " "<< x<<endl;
+        //cout <<i<<" "<< y << " "<< x<<endl;
     }
      cout << y+1 <<" "<< x+1 << endl;
         
