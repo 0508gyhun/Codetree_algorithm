@@ -42,17 +42,15 @@ int main() {
     }
 
 
-    for(int i = 0 ; i < n ; i ++)
-    {
-        for(int j = 0 ; j < m ; j ++)
-        {
-            char c = a[i][j]+'A'-1;
-            if(c > 'Z') c = c-'Z';
-            cout << c << " ";
-            // cout << a[i][j] << " ";
+     for(int i = 0; i < n; i++) {
+        for(int j = 0; j < m; j++) {
+            int val = a[i][j];
+            if(val > 26) val %= 26;
+            if(val == 0) val = 26;
+            
+            cout << (char)(val + 'A' - 1) << " ";
         }
         cout << endl;
     }
-  
     return 0;
 }
