@@ -9,7 +9,7 @@ int a[104][104];
 
 bool isRange(int y, int x)
 {
-    if(y>=0 && y<n && x >=0 && x<n) return true;
+    if(y>=0 && y<n && x >=0 && x<m) return true;
     return false;
 }
 int main() {
@@ -49,6 +49,7 @@ int main() {
             char c = a[i][j]+'A'-1;
             if(c > 'Z') c = c-'Z';
             cout << c << " ";
+            // cout << a[i][j] << " ";
         }
         cout << endl;
     }
