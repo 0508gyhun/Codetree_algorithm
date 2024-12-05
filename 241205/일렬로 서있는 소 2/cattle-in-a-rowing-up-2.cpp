@@ -17,7 +17,7 @@ int main() {
         {
             for(int k = j+1 ; k < n ; k++)
             {
-                if(i < j && j < k && a[i]<a[j] && a[j] < a[k]) cnt++;
+                if(i < j && j < k && a[i]<=a[j] && a[j] <= a[k]) cnt++;
             }
         }
     }
