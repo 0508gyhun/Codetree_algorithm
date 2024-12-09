@@ -23,7 +23,7 @@ int main() {
             if(i == j) continue;
             else if ( i > j)
             {
-                int tmp = abs(n-j) * a[j];
+                int tmp = abs(j-i+n) * a[j];
                 sum+=tmp;
             }
             else
