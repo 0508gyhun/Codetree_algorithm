@@ -10,7 +10,7 @@ bool isCarry(int i , int j , int k)
     int b = arr[j];
     int c = arr[k];
 
-    while(a != 0 && b!= 0 && c !=0)
+    while (a > 0 || b > 0 || c > 0)
     {
         
         int suba = a%10;
@@ -43,8 +43,10 @@ int main() {
             for(int k = j+1 ; k < n ; k++)
             {
                 if(!isCarry(i,j,k))
-                {
+                {   
+                    
                     int sum = arr[i]+arr[j]+arr[k];
+                    //cout << sum << endl;
                     mx = max(mx,sum);
                 }
             }
