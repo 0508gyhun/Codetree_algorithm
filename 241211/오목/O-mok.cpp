@@ -30,9 +30,9 @@ int main() {
 
             for(int k = 0 ; k < 8 ; k++) // dir
             {
-                int cury = i;
+                int cury = j;
                 int curt=1;
-                int curx = j;
+                int curx = i;
                 while(1)
                 {
                     int ny = cury + dy[k];
