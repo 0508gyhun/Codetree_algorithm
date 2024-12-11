@@ -38,7 +38,7 @@ int main() {
                     int ny = cury + dy[k];
                     int nx = curx + dx[k];
                     if(!isRange(ny,nx))break;
-                    if(a[cury][curx] != a[ny][nx]) break;   
+                    if(a[i][j] != a[ny][nx]) break;   
                     curt++;
                     curx = nx;
                     cury = ny;
