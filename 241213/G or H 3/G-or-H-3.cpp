@@ -22,13 +22,15 @@ int main() {
     }
 
     int mxx = INT_MIN;
-    for(int i= 1 ;i <= mx-k+1 ; i++)
+    for(int i= 1 ;i <= mx-k+1; i++)
     {
         int sum = 0 ;
-        for(int j = i ; j < i+k ; j++)
+        for(int j = i ; j < i+k+1 ; j++)
         {
+            // cout << j << " ";
             sum+=arr[j];            
         }
+        // cout << endl;
         mxx = max(mxx,sum);
     }
     cout << mxx;
