@@ -22,7 +22,7 @@ int main() {
     }
 
     int mxx = INT_MIN;
-    for(int i= 1 ;i <= mx-k+1; i++)
+    for(int i= 1 ;i <= 10000-k+1; i++)
     {
         int sum = 0 ;
         for(int j = i ; j < i+k+1 ; j++)
@@ -30,7 +30,7 @@ int main() {
             // cout << j << " ";
             sum+=arr[j];            
         }
-        // cout << endl;
+        // cout << sum <<endl;
         mxx = max(mxx,sum);
     }
     cout << mxx;
