@@ -5,7 +5,7 @@ int n,k;
 int num ;
 char pos;
 
-int arr[104];
+int arr[10004];
 
 int main() {
     // 여기에 코드를 작성해주세요.
