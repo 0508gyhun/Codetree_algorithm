@@ -33,6 +33,7 @@ int main() {
             if(arr2[j] != tmp[j]){
                 issame = false;
                 break;
+            }
         }
         if(issame) cnt++;
     }
