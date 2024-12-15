@@ -4,7 +4,7 @@ using namespace std;
 
 int n,m;
 int arr1[104];
-imt arr2[104];
+int arr2[104];
 
 
 int main() {
