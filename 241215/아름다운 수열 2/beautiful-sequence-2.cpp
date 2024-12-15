@@ -1,11 +1,12 @@
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 
 int n,m;
 int arr1[104];
 int arr2[104];
-
+int tmp[104];
 
 int main() {
     // 여기에 코드를 작성해주세요.
@@ -19,7 +20,7 @@ int main() {
 
     for(int i = 0 ; i <= n-m ; i++)
     {
-        for(int j = 0 ; j < m; ; j ++)
+        for(int j = 0 ; j < m; j ++)
         {
             tmp[j] = arr1[i+j];
         }
@@ -27,7 +28,7 @@ int main() {
         bool issame = true;
         for(int j = 0 ; j < m ; j++)
         {
-            i(arr2[j] != tmp[j])i{
+            i(arr2[j] != tmp[j]){
                 issame = false;
                 break;
         }
