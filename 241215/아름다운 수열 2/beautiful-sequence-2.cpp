@@ -28,7 +28,7 @@ int main() {
         bool issame = true;
         for(int j = 0 ; j < m ; j++)
         {
-            i(arr2[j] != tmp[j]){
+            if(arr2[j] != tmp[j]){
                 issame = false;
                 break;
         }
