@@ -8,6 +8,8 @@ int arr1[104];
 int arr2[104];
 int tmp[104];
 
+int cnt;
+
 int main() {
     // 여기에 코드를 작성해주세요.
 
