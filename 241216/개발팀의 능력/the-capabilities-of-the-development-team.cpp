@@ -70,7 +70,9 @@ for(int i = 0 ; i < 5 ; i++)
 
     }
 }
+if(mn != INT_MAX) cout << mn;
+else cout << "-1";
 
-cout << mn;
+
     return 0;
 }
