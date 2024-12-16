@@ -22,9 +22,9 @@ int main() {
     int mn = INT_MAX;
     for(int i = 0 ; i < 6 ; i++)
     {
-        for(int j = i ; j < 6 ; j++)
+        for(int j = i+1 ; j < 6 ; j++)
         {
-            for(int k = j ; k < 6 ; k++)
+            for(int k = j+1 ; k < 6 ; k++)
             {
                 int res = cal(i,j,k);
                 mn = min(mn,res);
