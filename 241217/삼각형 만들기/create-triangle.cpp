@@ -19,7 +19,7 @@ bool isXYpeong(int i, int j, int k)
         isY = true;
     }
     if(isX && isY) return true;
-    else false;
+    else return false;
 
 }
 int main() {
