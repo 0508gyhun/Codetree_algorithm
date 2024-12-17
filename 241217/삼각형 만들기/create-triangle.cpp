@@ -31,7 +31,7 @@ int main() {
     {
         cin >> a[i][0] >> a[i][1];
     }
-    int mx = INT_MIN;
+    int mx = 0;
     for(int i = 0 ;i < n ; i++)
     {
         for(int j = i+1 ; j < n ; j++)
