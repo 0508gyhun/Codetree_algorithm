@@ -1,46 +1,51 @@
-#include <bits/stdc++.h>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int a[1004][2];
-int tmp[1004];
-int n,b;
+int n, b;
 
 int main() {
-    // 여기에 코드를 작성해주세요.
-    cin >>n >>b;
+    cin >> n >> b;
 
-    int sum = 0;
-    for(int i = 0 ; i < n ; i++)
-    {
+    for(int i = 0; i < n; i++) {
         cin >> a[i][0] >> a[i][1];
-        tmp[i] = a[i][0] +a[i][1];
-        sum+=tmp[i];
     }
 
-    int cnt = 0 ;
-    int mx = INT_MIN;
-    for(int i = 0 ; i < n ; i ++)
-    {
+    int mx = 0;
+    
+    // 각 학생의 선물에 대해 반값 쿠폰 적용 시도
+    for(int i = 0; i < n; i++) {
         int tmpsum = 0;
         int cnt = 0;
-        tmp[i] = tmp[i] - a[i][0]/2;
-         sort(tmp,tmp+n);
-        for(int j = 0 ; j < n ; j++)
-        {
-            
-            
-
-            if(tmpsum + tmp[j]<=b)
-            {
-                tmpsum += tmp[j];
+        
+        // 임시 배열 복사 (원본 데이터 유지)
+        int tmp[1004][2];
+        for(int j = 0; j < n; j++) {
+            tmp[j][0] = a[j][0];
+            tmp[j][1] = a[j][1];
+        }
+        
+        // 현재 학생의 선물 반값 할인
+        tmp[i][0] /= 2;
+        
+        // 선물 및 배송비 정렬 (낮은 순)
+        sort(tmp, tmp + n, [](const int* a, const int* b) {
+            return (a[0] + a[1]) < (b[0] + b[1]);
+        });
+        
+        // 예산 내에서 최대한 많은 선물 구매
+        for(int j = 0; j < n; j++) {
+            if(tmpsum + tmp[j][0] + tmp[j][1] <= b) {
+                tmpsum += tmp[j][0] + tmp[j][1];
                 cnt++;
             }
-
         }
-        tmp[i] = tmp[i]+ a[i][0]/2;
-        mx = max(mx,cnt);
+        
+        // 최대값 갱신
+        mx = max(mx, cnt);
     }
+    
     cout << mx;
     return 0;
 }
