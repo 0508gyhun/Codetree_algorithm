@@ -24,11 +24,10 @@ int main() {
     {
         int tmpsum = 0;
         int cnt = 0;
+        tmp[i] = tmp[i] - a[i][0]/2;
         for(int j = 0 ; j < n ; j++)
         {
-            if(j == i){
-                tmp[i] = tmp[i] - a[i][0]/2;
-            }
+            
             sort(tmp,tmp+n);
 
             if(tmpsum + tmp[j]<b)
