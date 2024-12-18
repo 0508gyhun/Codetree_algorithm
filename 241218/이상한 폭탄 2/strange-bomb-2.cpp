@@ -23,21 +23,8 @@ int main() {
             {
                 if(abs(i-j) <= k)
                 {
-                    if( i>j)
-                    {
-                        st = j;
-                        ed = i;
-                    }
-                    else
-                    {
-                        st = i;
-                        ed = j;
-                    }
-
-                    for(int i = st ; i<= ed ; i++)
-                    {
-                        ans = max(ans,a[i]);
-                    }
+                    ans = max(ans,a[i]);
+                    
                 }
             }
             
