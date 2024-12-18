@@ -18,7 +18,6 @@ int main() {
         sum+=tmp[i];
     }
 
-    sort(tmp,tmp+n);
     int cnt = 0 ;
     int mx = INT_MIN;
     for(int i = 0 ; i < n ; i ++)
@@ -30,6 +29,7 @@ int main() {
             if(j == i){
                 tmp[i] = tmp[i] - a[i][0]/2;
             }
+            sort(tmp,tmp+n);
 
             if(tmpsum + tmp[j]<b)
             {
