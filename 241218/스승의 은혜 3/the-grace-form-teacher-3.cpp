@@ -24,8 +24,17 @@ int main() {
     {
         int tmpsum = 0;
         int cnt = 0;
-        tmp[i] = tmp[i] - a[i][0]/2;
+        int tmp[1004];
+        for(int j = 0; j < n; j++) {
+            // 현재 학생의 선물만 반값 처리
+            if(j == i) {
+                tmp[j] = a[j][0]/2 + a[j][1];
+            } else {
+                tmp[j] = a[j][0] + a[j][1];
+            }
+        }
         sort(tmp,tmp+n);
+        
         for(int j = 0 ; j < n ; j++)
         {        
 
@@ -36,7 +45,7 @@ int main() {
             }
 
         }
-        tmp[i] = tmp[i]+ a[i][0]/2;
+        //tmp[i] = tmp[i]+ a[i][0]/2;
         mx = max(mx,cnt);
     }
     cout << mx;
