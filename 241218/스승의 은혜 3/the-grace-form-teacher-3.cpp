@@ -30,7 +30,7 @@ int main() {
             
             sort(tmp,tmp+n);
 
-            if(tmpsum + tmp[j]<b)
+            if(tmpsum + tmp[j]<=b)
             {
                 tmpsum += tmp[j];
                 cnt++;
