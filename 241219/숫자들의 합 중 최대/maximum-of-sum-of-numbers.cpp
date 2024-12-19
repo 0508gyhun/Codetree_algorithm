@@ -11,7 +11,7 @@ int main() {
     for(int i = x ; i<=y ; i++)
     {
         int il = i%10;
-        int sip = i/10;
+        int sip = i/10 % 10;
         int beak = i/100;
         int chun = i/1000;
         int man = i/10000;
