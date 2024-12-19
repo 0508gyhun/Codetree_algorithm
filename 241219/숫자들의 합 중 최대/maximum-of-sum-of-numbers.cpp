@@ -12,8 +12,8 @@ int main() {
     {
         int il = i%10;
         int sip = i/10 % 10;
-        int beak = i/100;
-        int chun = i/1000;
+        int beak = i/100 % 10;
+        int chun = i/1000 % 10;
         int man = i/10000;
         mx = max(mx,il+sip+beak+chun+man);
     }
