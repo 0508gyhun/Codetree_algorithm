@@ -12,14 +12,19 @@ bool isInter(int it)
     for(int i = 0 ; i < s.size() ; i++)
     {
         int tmp = s[i]-'0';
-        a[tmp] =1;
+        a[tmp] ++;
     }
     int cnt = 0 ;
+    vector <int> v;
     for(int i= 0 ; i < 10 ; i++)
     {
-        if(a[i] ==1 )cnt++;
+        if(a[i] != 0 )
+        {
+            v.push_back(a[i]);
+        }
     }
-    if(cnt == 2) return true;
+
+    if(v.size() == 2 && ((v[0] == 1 && v[1] !=0 ) || (v[1] == 1 && v[0] !=0))) return true;
     else return false;
 
 }
