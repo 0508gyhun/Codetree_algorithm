@@ -16,7 +16,7 @@ int main() {
 
     }    
     int mx = INT_MIN;
-    for(int i = 1 ; i <= n ; i++)
+    for(int i = 1 ; i <= 3 ; i++)
     {
         int state[10] = {0,0,0,0};
         state[i] = 1;
