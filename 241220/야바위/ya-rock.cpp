@@ -18,7 +18,7 @@ int main() {
     int mx = INT_MIN;
     for(int i = 1 ; i <= n ; i++)
     {
-        int state[104] = {0,0,0,0};
+        int state[10] = {0,0,0,0};
         state[i] = 1;
         int ans = 0 ;
         for(int j= 0 ; j < n ; j++)
