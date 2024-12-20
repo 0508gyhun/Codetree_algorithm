@@ -28,18 +28,19 @@ int main() {
             for(int k = 0 ; k < n ; k++)
             {
                 
-                if(a[k] < j && a[k] < i) cnt1++; // 왼아래
-                if(a[k] < j && a[k] > i) cnt2++; // 왼위
-                if(a[k] > j && a[k] < i) cnt3++;//오른 아랴
-                if(a[k] > j && a[k] > i) cnt4++; // 오른 위
+                if(a[k] < j && b[k] < i) cnt1++; // 왼아래
+                if(a[k] < j && b[k] > i) cnt2++; // 왼위
+                if(a[k] > j && b[k] < i) cnt3++;//오른 아랴
+                if(a[k] > j && b[k] > i) cnt4++; // 오른 위
 
 
             }
-            //cout <<i << j << cnt1 << cnt2 << cnt3 << cnt4<< endl;
+           // cout <<i << j << cnt1 << cnt2 << cnt3 << cnt4<< endl;
             mx = max(mx, cnt1);
             mx = max(mx,cnt2);
             mx = max(mx,cnt3);
             mx = max(mx, cnt4);
+            // cout << mx << endl;
 
             ans = min(ans,mx);
 
