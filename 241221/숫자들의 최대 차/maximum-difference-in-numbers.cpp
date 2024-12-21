@@ -14,23 +14,19 @@ int main() {
         cin >> a[i];
     }
     int ans = INT_MIN;
-    for(int i = 0 ; i < n ; i++)
+    for(int i = 1 ; i <= 10000 ; i++)
     {
-        for(int j = i+1 ; j < n ; j++)
+        int st = i;
+        int end = i+k;
+        int cnt = 0;
+        for(int j = 0 ; j < n ; j++)
         {
-            int mx = INT_MIN;
-            int mn = INT_MAX;
-
-            for(int p = i ; p <= j ; p ++)
+            if(a[j] >= st && a[j] <= end)
             {
-                mx = max(mx,a[p]);
-                mx = min(mn,a[p]);
-            }
-            if(mx-mn <= k)
-            {
-                ans = max(ans,j-i);
+                cnt++;
             }
         }
+        ans = max(ans,cnt);
     }
     cout << ans;
     return 0;
