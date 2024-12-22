@@ -16,7 +16,7 @@ int sol(string s) // 두사람의 가장 가까운 거리
         if(prev>=0 && s[i] == '1')
         {
             dist = i-prev;
-            previ = i;
+            prev = i;
         }
         if(prev < 0 && s[i] == '1')
         {
