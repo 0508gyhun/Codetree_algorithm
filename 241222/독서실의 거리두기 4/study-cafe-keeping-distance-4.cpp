@@ -10,19 +10,23 @@ int sol(string s) // 두사람의 가장 가까운 거리
     int mn = INT_MAX;
     int dist = INT_MAX;
     int prev = -1;
-    
-     for(int i = 0; i < s.size(); i++)
+    for(int i = 0 ; i < s.size() ; i++)
     {
-        if(s[i] == '1')
+        
+        if(prev>=0 && s[i] == '1')
         {
-            if(prev >= 0)
-            {
-                dist = i - prev;
-                mn = min(mn, dist);
-            }
+            dist = i-prev;
+            previ = i;
+        }
+        if(prev < 0 && s[i] == '1')
+        {
             prev = i;
         }
+        mn = min(mn,dist);
+
     }
+
+    
     return mn;
 }
 
