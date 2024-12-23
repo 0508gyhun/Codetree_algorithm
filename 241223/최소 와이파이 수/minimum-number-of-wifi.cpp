@@ -19,7 +19,7 @@ int main() {
         if(cnt == m)
         {
             wifi++;
-            i = i+m;
+            i = i*2;
         }
 
         if(a[i] == 1)cnt++;
