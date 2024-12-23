@@ -1,23 +1,28 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <vector>
+#include <climits>
 using namespace std;
-int n; 
-int a[100004];
-int main() {
-    // 여기에 코드를 작성해주세요.
-    cin >> n; 
-    for(int i = 0 ; i < 2*n ; i++)
-    {
-        cin >> a[i];
-    }
 
-    sort(a,a+2*n);
-    int mx = INT_MIN;
-    for(int i = 1 ; i < 2*n ; i++)
-    {
-        mx = max(mx,a[i]-a[i-1]);
-    }
-    cout << mx;
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     
+    int n;
+    cin >> n;
+    
+    vector<int> arr(2*n + 1);  // 1-based indexing
+    for(int i = 1; i <= 2*n; i++) {
+        cin >> arr[i];
+    }
+    
+    sort(arr.begin() + 1, arr.end());  // 1부터 정렬 (0번 인덱스는 무시)
+    
+    int min_diff = INT_MAX;
+    for(int i = 1; i <= n; i++) {
+        min_diff = min(min_diff, arr[n + i] - arr[i]);
+    }
+    
+    cout << min_diff;
     return 0;
 }
