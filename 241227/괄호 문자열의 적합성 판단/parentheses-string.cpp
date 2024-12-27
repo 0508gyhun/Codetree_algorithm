@@ -16,15 +16,11 @@ int main() {
             stk.push(s[i]);
         }
         else{
-            if(stk.top() == ')')
-            {
-                cout<<"No"<<endl;
+             if(stk.empty()) {
+                cout << "No";
                 return 0;
             }
-            else
-            {
-                stk.pop();
-            }
+            stk.pop();
         }
 
     }
