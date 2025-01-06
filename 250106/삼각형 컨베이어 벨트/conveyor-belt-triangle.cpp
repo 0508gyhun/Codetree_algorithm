@@ -19,15 +19,17 @@ int main() {
 for(int k = 0 ; k < t ; k++)
 {
     int temp = a[3*n-1];
-    for(int i = 3*n-1 ; i >0 ; i++){
+    for(int i = 3*n-1 ; i >0 ; i--){
         a[i] = a[i-1];
    }
    a[0] = temp;
 
 }
 
-  for(int i = 0 ; i < n ; i++) cout<< a[i]<<" "<< endl;
-   for(int i = n ; i < 2*n ; i++) cout<< a[i]<<" "<< endl;
+  for(int i = 0 ; i < n ; i++) cout<< a[i]<<" ";
+  cout << endl;
+   for(int i = n ; i < 2*n ; i++) cout<< a[i]<<" ";
+   cout << endl;
    for(int i = 2*n ; i < 3*n ; i++) cout << a[i]<<" ";
 
 
