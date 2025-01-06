@@ -7,8 +7,9 @@ bool InRange(int x, int y) {
     return 0 <= x && x < n && 0 <= y && y < n;
 }
 
-int sol(int row, int col, int l , int k)
+int sol(int y, int x, int l , int k)
 {
+    int sum = 0;
     int dy[4] = {-1,-1,1,1};
     int dx[4] = {1,-1,-1,1};
     int dir[4] = {l,k,l,k};
