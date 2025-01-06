@@ -18,7 +18,7 @@ bool isyang(int strow, int stcol, int edrow, int edcol)
     {
         for(int j = stcol ; j <= edcol ; j++)
         {
-            if(a[i][j] < 0 ){
+            if(a[i][j] <= 0 ){
                 res = false;
                 return res;
             }  
