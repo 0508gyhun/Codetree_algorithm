@@ -47,6 +47,15 @@ void mvright(int r1, int c1, int r2, int c2) {
     for (int i = r2 - 1; i > r1; i--) {
         a[i][c1] = bound[idx++];
     }
+
+    for(int i = 0 ; i < n ; i++)
+    {
+        for(int j = 0 ; j < m ; j++)
+        {
+            cout << a[i][j] <<" ";
+        }
+        cout << endl;
+    }
 }
 
 void sol(int i, int j) {
@@ -75,7 +84,7 @@ void sol(int i, int j) {
     }
 
     // 평균 계산
-    a[i][j] = sum / cnt;
+    b[i][j] = sum / cnt;
 }
 
 int main() {
@@ -97,6 +106,16 @@ int main() {
         // 테두리 회전
         mvright(r1, c1, r2, c2);
 
+        int b[104][104] = {0,};
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                b[i][j] = a[i][j];
+         
+            }
+        }
+
+
+
         // 내부 값 업데이트
         for (int i = r1; i <= r2; i++) {
             for (int j = c1; j <= c2; j++) {
@@ -108,7 +127,7 @@ int main() {
         cout << "\nResult:\n";
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                cout << a[i][j] << " ";
+                cout << b[i][j] << " ";
             }
             cout << endl;
         }
