@@ -3,6 +3,7 @@ using namespace std;
 
 int n, m, q;
 int a[104][104];
+int b[104][104];
 int r1, c1, r2, c2;
 
 void mvright(int r1, int c1, int r2, int c2) {
@@ -48,14 +49,14 @@ void mvright(int r1, int c1, int r2, int c2) {
         a[i][c1] = bound[idx++];
     }
 
-    for(int i = 0 ; i < n ; i++)
-    {
-        for(int j = 0 ; j < m ; j++)
-        {
-            cout << a[i][j] <<" ";
-        }
-        cout << endl;
-    }
+    // for(int i = 0 ; i < n ; i++)
+    // {
+    //     for(int j = 0 ; j < m ; j++)
+    //     {
+    //         cout << a[i][j] <<" ";
+    //     }
+    //     cout << endl;
+    // }
 }
 
 void sol(int i, int j) {
@@ -106,13 +107,21 @@ int main() {
         // 테두리 회전
         mvright(r1, c1, r2, c2);
 
-        int b[104][104] = {0,};
+        // b[104][104] = {0,};
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 b[i][j] = a[i][j];
          
             }
         }
+        // cout <<"b"<< endl;
+        //  for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j < m; j++) {
+        //         cout << b[i][j] << " ";
+        //     }
+        //     cout << endl;
+        // }
+        // cout << endl;
 
 
 
@@ -123,15 +132,22 @@ int main() {
             }
         }
 
-        // 출력 중간 결과
-        cout << "\nResult:\n";
         for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                a[i][j] = b[i][j];
+         
+            }
+        }
+        // 출력 중간 결과
+        // cout << "\nResult:\n";
+       
+    }
+
+     for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 cout << b[i][j] << " ";
             }
             cout << endl;
         }
-    }
-
     return 0;
 }
