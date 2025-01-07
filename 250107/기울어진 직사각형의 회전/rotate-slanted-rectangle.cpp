@@ -45,15 +45,15 @@ void sol(int r, int c, int m1, int m2, int m3, int m4, int dir) {
     }
 
     // 테두리 값 갱신
-    r = str; c = stc; // 시작점 복원
-    a[r][c] = v[0];
+   // 시작점 복원
+    a[str][stc] = v[0];
     int idx = 1;
 
     for (int i = 0; i < 4; i++) { // 각 방향으로 이동
         for (int j = 0; j < dr[i]; j++) {
-            r += dy[i];
-            c += dx[i];
-            if(idx != v.size()) a[r][c] = v[idx++];
+            str += dy[i];
+            stc += dx[i];
+            if(idx != v.size()) a[str][stc] = v[idx++];
         }
     }
 
