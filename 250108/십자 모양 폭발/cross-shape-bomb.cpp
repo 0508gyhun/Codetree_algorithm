@@ -43,7 +43,7 @@ void bomb(int r, int c)
         {
             int ny = y+ dy[i];
             int nx = x+ dx[i];
-            // if(ny<0 || nx <0 || ny>=n || nx >=n)continue;
+            if(ny<0 || nx <0 || ny>=n || nx >=n)continue;
            // cout << "ny nx" <<ny<<" "<<nx<< endl;
             a[ny][nx] = 0;
             y = ny;
