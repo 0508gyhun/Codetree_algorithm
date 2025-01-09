@@ -92,9 +92,8 @@ void down ()
     for(int i = 0 ; i < n ; i++)
     {
         for(int j = 0 ; j < n ; j++){
-            cout << temp[i][j] <<" ";;
+            arr[i][j] = temp[i][j];
         }
-        cout << endl;
     }
 }
 int main() {
@@ -123,6 +122,8 @@ int main() {
             }
         }
 
+        down();
+
     //    print();
         //c열에서 0 이 아닌 가장 맨위 숫자만큼 십자가로 터트리기
         // 0인 것 다 중력으로 내리기 
@@ -130,7 +131,13 @@ int main() {
         
     }
 
-    down();
+    for(int i = 0 ; i < n ; i++)
+    {
+        for(int j = 0 ; j < n ; j++){
+            cout << arr[i][j]<<" ";
+        }
+        cout << endl;
+    }
 
     // Write your code here!
 
