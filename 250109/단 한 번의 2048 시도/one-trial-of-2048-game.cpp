@@ -53,6 +53,11 @@ void plus_()
 void down()
 {//arr->templus
     for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            templus[i][j] = 0;
+        }
+    }
+    for (int i = 0; i < 4; i++) {
       int idx= 3;
         for (int j = 3 ; j >= 0; j--) {
             if(arr[j][i] != 0)  templus[idx--][i] = arr[j][i]; 
@@ -120,7 +125,7 @@ int main() {
     //     }
     //     cout << endl;
     // }
-   
+   down();
     plus_();
     down();
     
