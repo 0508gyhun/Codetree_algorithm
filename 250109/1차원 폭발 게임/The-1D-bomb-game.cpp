@@ -16,18 +16,15 @@ void fillzero(int st, int end)
     }
 }
 
-int getEndindx(int start_idx, int curr_num)
+int getEndindx(int i, int num)
 {
-    int end_idx = start_idx + 1;
-    while(end_idx < arrsize) {
-        if(numbers[end_idx] == curr_num)
-            end_idx++;
-        else{
-            break;
-        }
+    int idx = i+1;
+    for(int j = idx ; j < arrsize ; j ++)
+    {
+        if(numbers[j] == num) idx++;
+        else break;
     }
-
-    return end_idx - 1;
+    return idx-1;
 }
 
 
