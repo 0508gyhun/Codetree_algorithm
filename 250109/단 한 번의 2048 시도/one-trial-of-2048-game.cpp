@@ -105,12 +105,12 @@ int main() {
     else if (dir == 'U')
     {
         
-    }
-    else if (dir == 'D')
-    {
         rotaterighgt();
         rotaterighgt();
 
+    }
+    else if (dir == 'D')
+    {
     }
 
 
@@ -143,12 +143,14 @@ int main() {
     }
     else if (dir == 'U')
     {
-        
+     
+        rotaterighgt();
+        rotaterighgt();
+   
     }
     else if (dir == 'D')
     {
-        rotaterighgt();
-        rotaterighgt();
+        
     }
     // cout <<"final"<< endl;
     
