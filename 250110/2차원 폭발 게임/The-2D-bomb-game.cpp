@@ -164,10 +164,13 @@ int main() {
         rotateRight();
         down();
     }
-    // while(ispossible())
-    // {
+    while(ispossible())
+    {
         bomb();
         down();
+        rotateRight();
+        down();
+    }
     
     
 
