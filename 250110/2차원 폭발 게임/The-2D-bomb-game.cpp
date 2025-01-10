@@ -173,8 +173,7 @@ int main() {
     {
         bomb();
         down();
-        rotateRight();
-        down();
+       
     }
     
     
