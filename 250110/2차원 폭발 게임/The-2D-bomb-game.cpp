@@ -161,6 +161,11 @@ int main() {
     {
         bomb();
         down();
+        while(ispossible())
+        {
+            bomb();
+            down();
+        }
         rotateRight();
         down();
     }
