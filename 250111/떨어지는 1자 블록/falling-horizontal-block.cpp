@@ -33,10 +33,10 @@ int main() {
         }
     }
 
-   
+    int row, stcol, endcol;
     for(int i = 0 ; i < n ; i++)
     {
-        int row, stcol, endcol;
+       
         bool flag = true;
         if(isyeonsok(i))
         {
@@ -48,14 +48,15 @@ int main() {
             // cout << row<<" "<<stcol <<" "<< endcol << endl;
         }
         else{
-            //  cout <<"not 연속"<< endl;
-            // cout << row<<" "<<stcol <<" "<< endcol << endl;
-            paint(row, stcol, endcol);
             break;
-           
 
         }
     }
+
+    // cout << row<<" "<<stcol <<" "<< endcol << endl;
+    paint(row, stcol, endcol);
+    
+           
 
 
 
