@@ -3,9 +3,9 @@
 using namespace std;
 
 int n;
-int arr[50][50];
-int arr_temp[50][50];
-int temp_down[50][50];
+int arr[51][51];
+int arr_temp[51][51];
+int temp_down[51][51];
 
 
 void bomb(int r, int c, int k)
@@ -115,16 +115,16 @@ int main() {
     int k = n/2+1;
     // Write your code here!
 
-    // initarr();
+     initarr();
     // bomb(2,2,3);
     // print();
     // cout << endl;
     // down();
     // print();
-    // int sum = garocheck() + serocheck();
+    int sum = garocheck() + serocheck();
     // cout << sum<<endl;
 
-    int mx = INT_MIN;
+    int mx = sum;
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
