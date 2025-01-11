@@ -128,11 +128,10 @@ int main() {
 
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            for(int p = 1 ; p <= k ; p ++)
-            {
+            
                 //arr initialize
                 initarr();
-                bomb(i,j,p);
+                bomb(i,j,arr[i][j]);
                 // print();
                 // cout << endl;
                 down();
@@ -140,7 +139,7 @@ int main() {
                 int sum = garocheck() + serocheck();
               //  cout << sum<<endl;
                 mx = max(mx,sum);
-            }
+            
         }
     }
     cout << mx ;
