@@ -9,26 +9,20 @@ int dy[4] = {-1, 0, 1, 0}; // 상, 우, 하, 좌
 int dx[4] = {0, 1, 0, -1};
 
 // 범위 확인 함수
-// bool inRange(int y, int x) {
-//     return y >= 0 && y < n && x >= 0 && x < n;
-// }
-bool InRange(int x, int y) {
-    return 0 <= x && x < n && 0 <= y && y < n;
+bool inRange(int y, int x) {
+    return y >= 0 && y < n && x >= 0 && x < n;
 }
-
 
 // 폭탄 확장 함수
 void setbomb(int t) {
     for (auto k : v) { // 현재 폭탄 위치를 기준으로 확장
         for (int i = 0; i < 4; i++) {
-             // 거리 t만큼 확장
-                int ny = k.first + t * dy[i];
-                int nx = k.second + t * dx[i];
-                if (InRange(ny, nx)) 
-                {
-                    a[ny][nx] = 1;
-                 } // 폭탄을 확장
-            
+            for (int j = 1; j <= t; j++) { // 거리 t만큼 확장
+                int ny = k.first + j * dy[i];
+                int nx = k.second + j * dx[i];
+                if (!inRange(ny, nx)) break; // 범위를 벗어나면 중단
+                a[ny][nx] = 1; // 폭탄을 확장
+            }
         }
     }
 }
@@ -67,7 +61,7 @@ int main() {
         searchbomb(); // 현재 폭탄 위치 저장
         setbomb(1 << (p - 1)); // 거리 2^(p-1)로 확장
     }
-    //print();
+
     int ans = 0;
     for (int i = 0; i < n; i++) { // 폭탄이 설치된 칸의 개수 계산
         for (int j = 0; j < n; j++) {
