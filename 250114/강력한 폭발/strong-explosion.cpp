@@ -85,9 +85,9 @@ int letsbomb()
             {
                 a[row+1][col+1] = 1;   
             }
-            if(col+1 < n && row-1 >= n)
+            if(col+1 < n && row-1 >= 0)
             {
-                a[row+1][col-1] = 1;   
+                a[row-1][col+1] = 1;   
             }
         }
     }
