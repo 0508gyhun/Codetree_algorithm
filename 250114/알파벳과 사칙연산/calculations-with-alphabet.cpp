@@ -47,7 +47,7 @@ void choose(int num)
 
     for(int i = 1 ; i <= 4 ;i++)
     {
-        if (num > 0 && c[num - 1] == '*' && v.back() == 1 && i == 1) continue; // 중복 제거
+        
 
         v.push_back(i);
         choose(num+1);
