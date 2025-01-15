@@ -28,16 +28,23 @@ void sol(int currnum)
     for(int i = 1 ; i<= K ; i++)
     {
 
-        if(currnum>=2 && v[currnum-1] == i && v[currnum-2] == i)
-        {
-            continue;
-            
-        }
-        else
+        if(currnum<2)
         {
             v.push_back(i);
             sol(currnum+1);
             v.pop_back();
+        }
+        else
+        {
+            if(v[currnum-1] == i && v[currnum-2] == i)
+            {
+               
+            }
+            else{
+                 v.push_back(i);
+                sol(currnum+1);
+                v.pop_back();
+            }
         }
         
     }
