@@ -21,7 +21,7 @@ int cal()
     }
     // cout << endl;
     totalnum = totalnum-select;
-    cout << totalnum <<" "<<select<<endl;
+    //cout << totalnum <<" "<<select<<endl;
     return abs(totalnum-select);
 }
 void sol(int idx, int cnt)
