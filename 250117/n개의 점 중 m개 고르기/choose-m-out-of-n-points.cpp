@@ -6,8 +6,7 @@ using namespace std;
 int n, m;
 int x[20], y[20];
 vector<int> v;  // n개 중 m개 선택한 점들의 인덱스 저장
-vector<int> selected;  // m개 중 2개 선택한 실제 인덱스
-int mn = INT_MAX;
+int mn = INT_MAX;  // 최종 답 (최대 거리들 중 최소값)
 
 // 두 점 사이의 거리 제곱 계산
 long long dif(int n1, int n2) {
@@ -16,40 +15,31 @@ long long dif(int n1, int n2) {
     return s1 + s2;
 }
 
-// 선택된 두 점 사이의 거리 계산
-long long cal() {
-    return dif(selected[0], selected[1]);
-}
-
-// m개 중 2개 선택
-void sol2(int idx, int cnt) {
-    if(cnt == 2) {
-        mn = min(mn, (int)cal());
-        return;
+// 선택된 m개의 점들 중 가장 먼 거리 찾기
+int findMaxDistance() {
+    int maxDist = 0;
+    // 선택된 모든 점들 쌍에 대해 거리 계산
+    for(int i = 0; i < v.size(); i++) {
+        for(int j = i + 1; j < v.size(); j++) {
+            maxDist = max(maxDist, (int)dif(v[i], v[j]));
+        }
     }
-    
-    for(int i = idx; i < v.size(); i++) {
-        selected.push_back(v[i]);
-        sol2(i + 1, cnt + 1);
-        selected.pop_back();
-    }
+    return maxDist;
 }
 
-void print() {
-    selected.clear();
-    sol2(0, 0);
-}
-
-// n개 중 m개 선택
-void sol(int idx, int cnt) {
+// n개 중 m개 선택하는 조합
+void solve(int idx, int cnt) {
     if(cnt == m) {
-        print();
+        // m개가 선택되면 그 중 최대 거리 계산
+        int maxDist = findMaxDistance();
+        // 지금까지의 최소값과 비교하여 갱신
+        mn = min(mn, maxDist);
         return;
     }
     
     for(int i = idx; i < n; i++) {
         v.push_back(i);
-        sol(i + 1, cnt + 1);
+        solve(i + 1, cnt + 1);
         v.pop_back();
     }
 }
@@ -61,7 +51,7 @@ int main() {
         cin >> x[i] >> y[i];
     }
     
-    sol(0, 0);
+    solve(0, 0);
     cout << mn;
     
     return 0;
