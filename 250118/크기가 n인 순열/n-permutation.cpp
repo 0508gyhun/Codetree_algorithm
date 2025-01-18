@@ -18,7 +18,7 @@ void print()
 void sol(int idx)
 {
  
-    if(idx == n)
+    if(idx == n+1)
     {
         print();
         return ;
@@ -45,7 +45,7 @@ int main() {
     cin >> n;
 
 
-    sol(0);
+    sol(1);
     // Write your code here!
 
     return 0;
