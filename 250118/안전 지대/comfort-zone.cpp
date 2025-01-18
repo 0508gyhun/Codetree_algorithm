@@ -35,7 +35,7 @@ int main() {
     }
     //cout << num_mx;
     int mx = 0;
-    int key;
+    int key=1;
     int cnt;
     // k = 1~젤 큰수 // 0은 웅덩이 
     for(int k = 1 ; k <= num_mx ; k++)
