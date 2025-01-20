@@ -28,7 +28,7 @@ pair<int,int> findrc()
     {
         for(int j = 0 ; j < n ; j++)
         {
-            if(a[i][j] == mx)
+            if(a[i][j] == mx && visited[i][j] == 1)
             {
                 pair<int,int> ans;
                 ans.first = i;
@@ -37,6 +37,7 @@ pair<int,int> findrc()
             }
         }
     }
+    return {r,c};
 }
 void bfs(int rr,int cc)
 {
@@ -78,6 +79,7 @@ int main() {
 
     for(int i = 0 ; i < k ; i++)
     {
+        // cout << "r" << r<<"c"<<c<<endl;
         initvisited();
        // q.clear();
         q.push({r,c});
