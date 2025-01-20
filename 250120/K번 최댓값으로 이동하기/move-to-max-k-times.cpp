@@ -40,7 +40,7 @@ pair<int,int> findrc()
 }
 void bfs(int rr,int cc)
 {
-    mx = 0;
+    mx = 1;
     while(q.size())
     {
         int y = q.front().first;
@@ -88,7 +88,7 @@ int main() {
         r = result.first;
         c = result.second;
 
-       // cout << mx <<endl;
+        //cout << mx <<endl;
     }
     cout << r+1 <<" "<< c+1;
 
