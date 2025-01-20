@@ -50,7 +50,7 @@ int main() {
     bfs();
 
     // Write your code here!
-    if(dist[n-1][m-1] > 1)cout << dist[n-1][m-1];
+    if(visited[n-1][m-1] == 1)cout << dist[n-1][m-1];
     else cout<< -1;
     return 0;
 }
