@@ -24,7 +24,7 @@ void bfs()
         {
             int ny = y + dy[i];
             int nx = x + dx[i];
-            if(ny<0 || nx <0 || nx>= n || ny>=m || visited[ny][nx] == 1 || a[ny][nx] == 0) continue;
+            if(ny<0 || nx <0 || ny>= n || nx>=m || visited[ny][nx] == 1 || a[ny][nx] == 0) continue;
 
             visited[ny][nx] = 1;
             dist[ny][nx] = dist[y][x] + 1;   
