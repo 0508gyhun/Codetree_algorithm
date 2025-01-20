@@ -84,9 +84,16 @@ int main() {
         visited[r][c]= 1;
         bfs(r,c);
         pair<int,int> result = findrc();
-        
-        r = result.first;
-        c = result.second;
+        if(result.first == r && result.second == c)
+        {
+            break;
+        }
+        else
+        {
+            r = result.first;
+            c = result.second;
+        }
+     
 
         //cout << mx <<endl;
     }
