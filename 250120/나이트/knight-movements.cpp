@@ -47,7 +47,7 @@ int main() {
 
     visited[r1][c1] = 1;
     dist[r1][c1] = 0;
-
+    q.push({r1,c1});
     dfs();
 
     if(visited[r2][c2] == 1) cout << dist[r2][c2];
