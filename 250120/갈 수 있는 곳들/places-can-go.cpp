@@ -61,9 +61,12 @@ int main() {
         
     }
     int ans = 0;
-    for(int i : v ) 
+    for(int i = 0 ; i < n ; i++ ) 
     {
-        ans+=i;   
+        for(int j = 0 ; j < n ; j++)
+        {
+            if(visited[i][j] ==1) ans++;
+        }
     }
     cout << ans ;
 
