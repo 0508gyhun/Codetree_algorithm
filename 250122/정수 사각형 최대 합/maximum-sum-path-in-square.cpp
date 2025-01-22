@@ -21,13 +21,13 @@ int main() {
         dp[i][0] = a[i][0] + dp[i-1][0];
     }
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << dp[i][j]<<" ";
-        }
-        cout << endl;
-    }
-    cout << endl;
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j < n; j++) {
+    //         cout << dp[i][j]<<" ";
+    //     }
+    //     cout << endl;
+    // }
+    // cout << endl;
 
 
     for(int i = 1 ; i < n ;i++) // 대각
@@ -35,13 +35,13 @@ int main() {
         dp[i][i] = dp[i-1][i-1] + a[i][i];
     }
     // Write your code here!
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << dp[i][j]<<" ";
-        }
-        cout << endl;
-    }
-    cout << endl;
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j < n; j++) {
+    //         cout << dp[i][j]<<" ";
+    //     }
+    //     cout << endl;
+    // }
+    // cout << endl;
 
     for(int i = 2 ; i < n ; i++)
     {
