@@ -38,7 +38,7 @@ int main() {
     //     }
     //     cout << endl;
     // }
-    for(int i = n-2 ; i<n ; i++)
+    for(int i = 1 ; i<n ; i++)
     {
         for(int j = n-2 ; j >=0 ; j--)
         {
@@ -47,12 +47,12 @@ int main() {
     }
     // cout << endl;
 
-     for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout <<dp[i][j]<<" ";
-        }
-        cout << endl;
-    }
+    //  for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j < n; j++) {
+    //         cout <<dp[i][j]<<" ";
+    //     }
+    //     cout << endl;
+    // }
 
     cout << dp[n-1][0];
     return 0;
