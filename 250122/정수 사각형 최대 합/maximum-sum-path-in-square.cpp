@@ -21,6 +21,11 @@ int main() {
         dp[i][0] = a[i][0] + dp[i-1][0];
     }
 
+    for(int i = 1 ; i < n ; i++) // rk로 
+    {
+        dp[0][i] = a[0][i] + dp[0][i-1];
+    }
+
     // for (int i = 0; i < n; i++) {
     //     for (int j = 0; j < n; j++) {
     //         cout << dp[i][j]<<" ";
@@ -30,9 +35,12 @@ int main() {
     // cout << endl;
 
 
-    for(int i = 1 ; i < n ;i++) // 대각
+    for(int i = 1 ; i < n ;i++) // 
     {
-        dp[i][i] = dp[i-1][i-1] + a[i][i];
+        for(int j =1 ; j < n ; j++)
+        {
+            dp[i][j] = max(dp[i][j-1], dp[i-1][j]) + a[i][j];
+        }
     }
     // Write your code here!
     // for (int i = 0; i < n; i++) {
@@ -43,14 +51,7 @@ int main() {
     // }
     // cout << endl;
 
-    for(int i = 2 ; i < n ; i++)
-    {
-        for(int j = 1 ; j < i ; j++)
-        {
-            dp[i][j] = max(dp[i-1][j]+a[i][j], dp[i-1][j-1] + a[i][j] );
-        }
-    }
-
+ 
     // for (int i = 0; i < n; i++) {
     //     for (int j = 0; j < n; j++) {
     //         cout << dp[i][j]<<" ";
@@ -58,11 +59,7 @@ int main() {
     //     cout << endl;
     // }
     // cout << endl;
-    int ans = 0 ;
-    for(int i = 0 ; i < n ; i++)
-    {
-        ans = max(ans,dp[n-1][i]);
-    }   
-    cout << ans;
+   
+   cout << dp[n-1][n-1];
     return 0;
 }
