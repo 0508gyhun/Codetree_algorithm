@@ -51,13 +51,18 @@ int main() {
         }
     }
 
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << dp[i][j]<<" ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-
+    // for (int i = 0; i < n; i++) {
+    //     for (int j = 0; j < n; j++) {
+    //         cout << dp[i][j]<<" ";
+    //     }
+    //     cout << endl;
+    // }
+    // cout << endl;
+    int ans = 0 ;
+    for(int i = 0 ; i < n ; i++)
+    {
+        ans = max(ans,dp[n-1][i]);
+    }   
+    cout << ans;
     return 0;
 }
