@@ -35,7 +35,7 @@ int prt() {
 int mn = INT_MAX;
 void go(int idx, int cnt) {
     if(idx == n_num) {
-        if(cnt == 3) {
+        if(cnt ?= 3) {
             mn = min(mn,prt());
         }
         return ;
