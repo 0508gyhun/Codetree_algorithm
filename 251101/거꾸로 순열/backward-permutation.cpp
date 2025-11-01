@@ -18,7 +18,7 @@ void go(int idx) {
         return;
     }
 
-    for(int i = 9 ; i <= 1 ; i++) {
+    for(int i = n ; i >= 1 ; i--) {
         if(visited[i]) continue;
         visited[i] = true;
         v.push_back(i);
