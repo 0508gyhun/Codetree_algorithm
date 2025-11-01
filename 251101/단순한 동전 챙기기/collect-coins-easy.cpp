@@ -82,7 +82,7 @@ int main() {
     //     cout << i.first <<" "<< i.second << endl;
     // }
     go(0,0);
-    if(mn = INT_MAX) mn = -1;
+    if(mn == INT_MAX) mn = -1;
     cout << mn;
 
 
