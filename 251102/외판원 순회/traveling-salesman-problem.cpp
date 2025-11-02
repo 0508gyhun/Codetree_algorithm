@@ -16,12 +16,14 @@ void prt() {
     int dest = 0;
     for(int i : v ) {
         dest = i;
+        if(A[st][dest] == 0) return ;
         sum+=A[st][dest];
-
+        // cout << "("<<A[st][dest]<<")";
         st = dest;
         // cout <<i <<" ";
     }
     sum+=A[st][0];
+    // cout << " sum = "<< sum;
     mn = min(mn,sum);
     // cout << endl;
 }
