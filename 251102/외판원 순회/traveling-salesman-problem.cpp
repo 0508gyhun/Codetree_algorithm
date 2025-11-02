@@ -22,6 +22,7 @@ void prt() {
         st = dest;
         // cout <<i <<" ";
     }
+    if(A[st][0] == 0) return;
     sum+=A[st][0];
     // cout << " sum = "<< sum;
     mn = min(mn,sum);
