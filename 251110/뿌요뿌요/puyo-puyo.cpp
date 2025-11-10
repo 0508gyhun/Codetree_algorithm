@@ -36,21 +36,27 @@ int main() {
             cin >> grid[i][j];
         }
     }
-    
+    int bcnt = 0;
     for(int i = 0 ; i < n ; i++) 
     {
         for(int j = 0 ; j < n ; j++) {
             if(visited[i][j] == 0 )
             {
+                
                 cnt = 0;
                 dfs(i,j,grid[i][j]);
-                if(cnt > 4 ) {
+                if(cnt >= 4 ) {
+                    bcnt++;
+                    mx = max(mx, cnt);
+                }
+                else
+                {
                     mx = max(mx, cnt);
                 }
             }
         }
     }
-    cout << mx;
+    cout <<bcnt<<" "<< mx;
     // Please write your code here.
 
     return 0;
