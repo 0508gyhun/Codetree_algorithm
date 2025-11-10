@@ -72,7 +72,7 @@ int main() {
 
         }
     }
-    cout << mxc <<" "<< mxk << endl;
+    cout << mxk <<" "<< mxc << endl;
 
     // Please write your code here.
 
