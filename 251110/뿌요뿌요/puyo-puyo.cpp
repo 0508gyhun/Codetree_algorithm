@@ -43,13 +43,13 @@ int main() {
             if(visited[i][j] == 0 )
             {
                 
-                cnt = 0;
+                cnt = 1;
+                visited[i][j] = 1;
                 dfs(i,j,grid[i][j]);
                 if(cnt >= 4 ) {
                     bcnt++;
                 }
-                
-                    mx = max(mx, cnt);
+                mx = max(mx, cnt);
                 
             }
         }
