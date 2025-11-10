@@ -47,8 +47,8 @@ int main() {
             mxgrid = max(mxgrid, grid[i][j]);
         }
     }
-    int mxk = 1;
-    int mxc = 0;
+    int mxk = 0;
+    int mxc = 1;
     for(int k = 1 ; k <= mxgrid ; k++)
     {
         visited_clear();
