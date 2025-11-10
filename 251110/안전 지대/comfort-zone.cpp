@@ -47,7 +47,7 @@ int main() {
             mxgrid = max(mxgrid, grid[i][j]);
         }
     }
-    int mxk = 0;
+    int mxk = 1;
     int mxc = 0;
     for(int k = 1 ; k <= mxgrid ; k++)
     {
