@@ -48,7 +48,7 @@ int main() {
         }
     }
     int mxk = 0;
-    int mxc = 1;
+    int mxc = -1;
     for(int k = 1 ; k <= mxgrid ; k++)
     {
         visited_clear();
