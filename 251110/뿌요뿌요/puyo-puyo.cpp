@@ -47,12 +47,10 @@ int main() {
                 dfs(i,j,grid[i][j]);
                 if(cnt >= 4 ) {
                     bcnt++;
-                    mx = max(mx, cnt);
                 }
-                else
-                {
+                
                     mx = max(mx, cnt);
-                }
+                
             }
         }
     }
