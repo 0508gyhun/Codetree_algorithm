@@ -18,8 +18,8 @@ int main() {
     cin >> r >> c;
     r--;
     c--;
-    int mr = 0;
-    int mc = 0;
+    int mr = r;
+    int mc = c;
     int st = grid[r][c] ;
     while(k--) {
         int mx = INT_MIN;
