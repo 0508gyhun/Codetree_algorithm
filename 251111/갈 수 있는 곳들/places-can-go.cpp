@@ -27,9 +27,10 @@ int main() {
         cin >> r[i] >> c[i];
         r[i]--;
         c[i]--;
+        visited[r[i]][c[i]] = 1;
         q.push({r[i], c[i]});
     }
-    int cnt = 0;
+    int cnt = q.size();
     while(!q.empty()) {
         int y,x;
         tie(y,x) = q.front();
