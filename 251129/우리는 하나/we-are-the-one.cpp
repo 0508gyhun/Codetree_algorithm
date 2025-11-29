@@ -4,7 +4,7 @@
 using namespace std;
 
 int n, k, u, d;
-int grid[8][8];
+int grid[10][10];
 int visited[10][10];
 int dy[4] = {-1,0,1,0};
 int dx[4] = {0,1,0,-1};
