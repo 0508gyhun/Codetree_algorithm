@@ -70,7 +70,7 @@ void prt() {
 
     visited_clear();
     for(int i : v) {
-        cout << i <<" "<< endl;
+        // cout << i <<" "<< endl;
         int y = city[i].first;
         int x = city[i].second;
         visited[y][x] = 1;
