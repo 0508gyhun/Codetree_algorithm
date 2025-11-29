@@ -70,7 +70,7 @@ void prt() {
 
     visited_clear();
     for(int i : v) {
-        // cout << i <<" "<< endl;
+        cout << i <<" "<< endl;
         int y = city[i].first;
         int x = city[i].second;
         visited[y][x] = 1;
@@ -84,6 +84,7 @@ void prt() {
 
 void go(int idx, int cnt) {
 
+    if(cnt > k ) return;
     if(idx == city.size())
     {
         if(cnt == k) {
