@@ -55,7 +55,7 @@ int main() {
     bfs();
 
     // Please write your code here.
-    if(dist[n-1][m-1] == 0) cout << 0;
+    if(dist[n-1][m-1] == 0) cout << -1;
     else cout << dist[n-1][m-1];
     return 0;
 }
