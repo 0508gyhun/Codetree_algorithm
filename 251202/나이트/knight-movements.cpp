@@ -47,7 +47,7 @@ int main() {
     visited[r1][c1] = 1;
     dist[r1][c1] = 0;
     bfs();
-
-    cout << dist[r2-1][c2-1];
+    if(dist[r2-1][c2-1] == 0) cout << -1;
+    else cout << dist[r2-1][c2-1];
     return 0;
 }
