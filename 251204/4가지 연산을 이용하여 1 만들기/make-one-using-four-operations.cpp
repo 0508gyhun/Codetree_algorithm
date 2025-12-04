@@ -31,15 +31,21 @@ int main() {
         }
         for(int i = 0 ; i < 4 ; i++) 
         {
-            int numn
-            if(i == 0 ) numn = num-1;
-            if(i == 1) numn = num +1;
-            if(i == 2 && numn % 2 == 0) num = num /2;
-            if(i == 3 && numn % 3 == 0) num = num /3;
-            if(numn>=0 && numn <= 1000000 &&visited[numn] == 0) 
+            int next_num = 0;
+            if(i == 0) next_num = num - 1;
+            else if(i == 1) next_num = num + 1;
+            else if(i == 2) {
+                if(num % 2 == 0) next_num = num / 2;
+                else continue; // 2로 안 나눠지면 이번 턴(i=2)은 무시
+            }
+            else if(i == 3) {
+                if(num % 3 == 0) next_num = num / 3;
+                else continue; // 3으로 안 나눠지면 이번 턴(i=3)은 무시
+            }
+            if(next_num >= 0 && next_num <= 1000000 && visited[next_num] == 0) 
             {
-                visited[numn] = 1;
-                q.push({numn, cnt+1});
+                visited[next_num] = 1;
+                q.push({next_num, cnt + 1});
             }
 
 
