@@ -15,7 +15,7 @@ int main() {
         cout << 0;
         return 0;
     }
-    
+
     visited[N] = 1;
     q.push({N,0});
 
@@ -31,14 +31,15 @@ int main() {
         }
         for(int i = 0 ; i < 4 ; i++) 
         {
-            if(i == 0 ) num = num-1;
-            if(i == 1) num = num +1;
-            if(i == 2 && num % 2 == 0) num = num /2;
-            if(i == 3 && num % 3 == 0) num = num /3;
-            if(num>=0 && num <= 1000000 &&visited[num] == 0) 
+            int numn
+            if(i == 0 ) numn = num-1;
+            if(i == 1) numn = num +1;
+            if(i == 2 && numn % 2 == 0) num = num /2;
+            if(i == 3 && numn % 3 == 0) num = num /3;
+            if(numn>=0 && numn <= 1000000 &&visited[numn] == 0) 
             {
-                visited[num] = 1;
-                q.push({num, cnt+1});
+                visited[numn] = 1;
+                q.push({numn, cnt+1});
             }
 
 
