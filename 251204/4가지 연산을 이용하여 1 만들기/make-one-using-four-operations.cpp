@@ -11,7 +11,11 @@ int main() {
     cin >> N;
 
     // Please write your code here.
-
+    if (N == 1) { // 이미 1이면 0번
+        cout << 0;
+        return 0;
+    }
+    
     visited[N] = 1;
     q.push({N,0});
 
