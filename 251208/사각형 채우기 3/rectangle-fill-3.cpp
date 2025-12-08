@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-int dp[1004];
+long long dp[1004];
 int n;
 
 int main() {
@@ -13,10 +13,10 @@ int main() {
 
     for(int i = 3 ; i <= n ; i++) 
     {
-        int basic = dp[i-1]*2 + dp[i-2]*3;
+        long long basic = dp[i-1]*2 + dp[i-2]*3;
     
         
-        int special = 0 ;
+        long long special = 0 ;
         for(int j = i-3 ; j >=0 ; j--) 
         {
             special += (dp[j] * 2);
