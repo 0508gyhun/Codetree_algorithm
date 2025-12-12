@@ -19,7 +19,7 @@ int main() {
         int sum = 0;
         for(int j = 0 ; j < i ; j++) 
         {
-            sum += (dp[i] + dp[i-1-j]);
+            sum += (dp[j] + dp[i-1-j]);
         }
         dp[i] = sum;
     }
