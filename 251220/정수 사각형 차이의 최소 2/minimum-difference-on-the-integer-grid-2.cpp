@@ -2,7 +2,7 @@
 #include <vector>
 #include <queue>
 #include <algorithm>
-#include <cstring> // memset 사용
+#include <cstring> // memset
 
 using namespace std;
 
@@ -17,9 +17,9 @@ bool inRange(int y, int x) {
     return (y >= 0 && x >= 0 && y < n && x < n);
 }
 
-// lo ~ hi 사이의 숫자만 밟고 지나갈 수 있는지 확인하는 BFS
+// lo 이상 hi 이하의 숫자만 밟을 수 있는지 확인하는 BFS
 bool canGo(int lo, int hi) {
-    // 시작점이 범위 밖이면 시작조차 불가
+    // 이미 밖에서 범위를 잡고 들어오지만, 혹시 모르니 시작점 체크
     if (grid[0][0] < lo || grid[0][0] > hi) return false;
 
     memset(visited, 0, sizeof(visited));
@@ -64,23 +64,28 @@ int main() {
         }
     }
 
-    // [전략 변경]
-    // 답(diff)을 0부터 차례대로 늘려가며 가능한지 확인한다.
-    // 가장 먼저 성공하는 diff가 무조건 '최소 차이'가 된다.
-    for (int diff = 0; diff <= 100; diff++) {
+    // 1. 답(차이, diff)을 0부터 하나씩 늘려가며 테스트
+    // 숫자의 범위가 보통 1~100이지만, 혹시 몰라 넉넉히 돌립니다. 
+    // 정답을 찾으면 바로 종료하므로 1000까지 잡아도 속도 문제 없습니다.
+    for (int diff = 0; diff <= 1000; diff++) {
         
-        // 현재 diff(차이)를 만들 수 있는 모든 lo(시작값)에 대해 시도
-        // 숫자는 1~100 사이이므로 lo는 1부터 100까지 가능
-        for (int lo = 1; lo <= 100; lo++) {
-            int hi = lo + diff;
+        // 2. lo(구간 최솟값) 설정
+        // 핵심: lo는 절대 시작점(grid[0][0])보다 클 수 없습니다.
+        // 시작점이 50인데 lo가 51이면 시작점을 못 밟기 때문입니다.
+        // 따라서 lo는 1부터 시작점까지만 반복합니다.
+        for (int lo = 1; lo <= grid[0][0]; lo++) {
             
-            // hi가 100을 넘어가면 숫자가 없으므로 의미 없음 (범위 초과)
-            if (hi > 100) break;
+            int hi = lo + diff;
 
-            // BFS 수행
+            // 핵심: hi(구간 최댓값)는 절대 시작점(grid[0][0])보다 작을 수 없습니다.
+            // 시작점이 50인데 hi가 49면 시작점을 못 밟습니다.
+            if (hi < grid[0][0]) continue;
+
+            // 위 조건으로 인해 [lo, hi] 구간에는 무조건 시작점 값이 포함됩니다.
+            // 이제 BFS로 끝까지 갈 수 있는지 확인만 하면 됩니다.
             if (canGo(lo, hi)) {
-                cout << diff; // 찾았다! 이게 최솟값이다.
-                return 0;     // 바로 종료 (더 검사할 필요 없음)
+                cout << diff; // 가능한 최소 차이를 찾음
+                return 0;     // 즉시 종료
             }
         }
     }
