@@ -14,7 +14,7 @@ void sol()
 
     for(int i = 1 ; i < N ; i++) 
     {
-        int mx = INT_MIN;
+        int mx = dp[i];
         for(int j = 0 ; j < i ; j++) 
         {
             if(M[j] < M[i])
