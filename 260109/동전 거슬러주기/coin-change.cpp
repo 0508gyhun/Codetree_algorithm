@@ -15,7 +15,7 @@ int main() {
 
      for(int i = 0 ; i <= N  ; i++)
     {
-        dp[i] = 100INF4;
+        dp[i] = INF;
     }
     dp[0] = 0;
 
