@@ -17,7 +17,7 @@ int main() {
     {
         dp[i] = INT_MAX;
     }
-    dp[0] = 1;
+    dp[0] = 0;
 
 
 
