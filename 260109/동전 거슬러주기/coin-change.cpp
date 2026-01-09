@@ -26,7 +26,7 @@ int main() {
     {
         for(int j = 0 ; j < N ; j++) 
         {
-            if(dp[i-coin[j]] == INT_MAX) continue;
+            // if(dp[i-coin[j]] == INT_MAX) continue;
             if(i-coin[j] >= 0) dp[i] = min(dp[i], dp[i-coin[j]] + 1);
         }
     }
