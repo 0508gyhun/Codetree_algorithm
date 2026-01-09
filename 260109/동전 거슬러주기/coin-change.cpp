@@ -5,6 +5,7 @@ using namespace std;
 
 int N, M;
 int coin[100];
+const int INF = 100000000;
 int dp[100004];
 int main() {
     cin >> N >> M;
@@ -13,7 +14,7 @@ int main() {
         cin >> coin[i];
     }
 
-     for(int i = 0 ; i <= N  ; i++)
+     for(int i = 0 ; i <= M  ; i++)
     {
         dp[i] = INF;
     }
