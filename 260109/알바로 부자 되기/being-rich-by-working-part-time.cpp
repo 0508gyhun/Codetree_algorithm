@@ -26,7 +26,7 @@ int main() {
 
             if(b < a)
             {
-                dp[i] = max(dp[i], dp[i]+ get<1>(v[j]));
+                dp[i] = max(dp[i], dp[i]+ get<2>(v[j]));
             }
         }
     }
