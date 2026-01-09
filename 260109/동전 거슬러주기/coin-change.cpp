@@ -31,8 +31,8 @@ int main() {
             dp[i] = min(dp[i], dp[i-coin[j]] + 1);
         }
     }
-
-    cout << dp[M];
+    if(dp[M] == INT_MAX) cout <<-1;
+    else cout << dp[M];
 
     // Please write your code here.
 
