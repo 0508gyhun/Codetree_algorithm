@@ -16,26 +16,28 @@ int main() {
     }
 
 
-    for(int i = 0 ; i < m ; i++) 
+    for(int i = 0 ; i <= m ; i++) 
     {
-        dp[i] = INT_MIN;
+        dp[i] = INT_MAX;
     }
     dp[0] = 0;
 
-    for(int i = 0 ; i < n ;i++) 
+    for(int i = 0; i < n ;i++) 
     {
         for(int j = m ; j >=0 ; j--)
         {
             if(j - A[i] >= 0 )
             {
-                if( j - A[i] != INT_MIN)
+                if( dp[j - A[i]] != INT_MAX)
                 {
-                    dp[j] = max(dp[j],dp[j-A[i]] +1 );
+                    dp[j] = min(dp[j],dp[j-A[i]] +1 );
                 }
             }
         }
     }
-    cout<<dp[m];
+    int ans = dp[m];
+    if(ans == INT_MAX) cout << -1;
+    else cout << ans;
     // Please write your code here.
 
     return 0;
