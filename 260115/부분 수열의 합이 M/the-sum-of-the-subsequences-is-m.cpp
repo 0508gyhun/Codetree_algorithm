@@ -6,8 +6,8 @@ using namespace std;
 // 동전을 더해서 숫자 m 을 만드는 갯수(최대 최소) 같은 동전이 1개 밖에 없음
 
 int n, m;
-int A[1004];
-int dp[1004];
+int A[10004];
+int dp[10004];
 
 int main() {
     cin >> n >> m;
