@@ -22,7 +22,7 @@ int main() {
         {
             if(i  - A[j] >= 0 )
             {
-                dp[i] = dp[i] + dp[i-A[j]];
+                dp[i] = (dp[i] + dp[i-A[j]])%10007;
             }
         }
         
