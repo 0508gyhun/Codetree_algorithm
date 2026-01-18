@@ -28,7 +28,7 @@ int main() {
         
     }
 
-    cout << dp[m];
+    cout << (dp[m] % 10007);
 
     // Please write your code here.
 
