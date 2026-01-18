@@ -13,7 +13,7 @@ int main() {
         cin >> coin[i];
     }
 
-    for(int i = 0 ; i < M ; i++) 
+    for(int i = 0 ; i <= M ; i++) 
     {
         dp[i] = INT_MIN;
     }
