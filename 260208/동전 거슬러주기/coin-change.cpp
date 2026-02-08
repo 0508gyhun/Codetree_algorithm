@@ -28,7 +28,7 @@ int main() {
         for(int j = 0 ; j < N ; j++) 
         {
             // if(dp[i-coin[j]] == INT_MAX) continue;
-            if(i-coin[j] >= 0 && dp[i-coin[j]] != INT_MAX) dp[i] = min(dp[i], dp[i-coin[j]] + 1);
+            if(i-coin[j] >= 0 && dp[i-coin[j]] != INF) dp[i] = min(dp[i], dp[i-coin[j]] + 1);
         }
     }
     if(dp[M] == INF) cout <<-1;
