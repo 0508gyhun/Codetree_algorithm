@@ -22,16 +22,16 @@ int main() {
     {
         for(int j = m ; j >=0 ; j--)
         {
-            if(i - A[j] >= 0 && dp[i - A[j]] != INT_MIN)
+            if(j - A[i] >= 0 && dp[j - A[i]] != INT_MIN)
             {
-                dp[j] = max(dp[j], dp[i - A[j]]+1);
+                dp[j] = max(dp[j], dp[j - A[i]]+1);
             }
         }
     }
-    for(int i = 0 ; i <= m ; i++)
-    {
-        cout << dp[i]<<" ";
-    }
+    // for(int i = 0 ; i <= m ; i++)
+    // {
+    //     cout << dp[i]<<" ";
+    // }
 
     if(dp[m] == INT_MIN) cout << "No";
     else cout << "Yes";
