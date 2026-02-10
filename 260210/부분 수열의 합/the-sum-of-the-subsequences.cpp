@@ -22,7 +22,7 @@ int main() {
     {
         for(int j = m ; j >=0 ; j--)
         {
-            if(i - A[j] >= 0 && dp[i - A[j] != INT_MIN)
+            if(i - A[j] >= 0 && dp[i - A[j]] != INT_MIN)
             {
                 dp[j] = max(dp[j], dp[i - A[j]]+1);
             }
