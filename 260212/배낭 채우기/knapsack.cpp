@@ -13,7 +13,7 @@ void initialize() {
     {
         for(int j = 0 ; j < 104 ; j++)
         {
-            dp[i][j] = 0;
+            dp[i][j] = INT_MIN;
         }
     }
     dp[0][0] = 0;
