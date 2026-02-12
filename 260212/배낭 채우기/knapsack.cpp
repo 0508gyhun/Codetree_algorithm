@@ -5,7 +5,7 @@ using namespace std;
 
 int N, M;
 int w[100], v[100];
-int dp[104][104];
+int dp[104][100004];
 
 
 void initialize() {
