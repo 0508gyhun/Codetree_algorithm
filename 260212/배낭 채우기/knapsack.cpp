@@ -4,7 +4,7 @@
 using namespace std;
 
 int N, M;
-int w[100], v[100];
+int w[104], v[104];
 int dp[104][100004];
 
 
