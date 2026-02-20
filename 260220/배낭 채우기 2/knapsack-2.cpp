@@ -24,7 +24,7 @@ int main() {
     {
         for(int j = 0 ; j < N ; j++)
         {
-            if(i>=w[j] && dp[i] != INT_MIN) dp[i] = max(dp[i], dp[i-w[j]] + v[j]);
+            if(i>=w[j] && dp[i-w[j]] != INT_MIN) dp[i] = max(dp[i], dp[i-w[j]] + v[j]);
         }
     }
 
