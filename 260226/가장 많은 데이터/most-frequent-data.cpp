@@ -22,7 +22,8 @@ int main() {
             ans = i.second;
         }
     }
-    cout << ans;
+    co
+ut << ans;
 
 
     // Please write your code here.
