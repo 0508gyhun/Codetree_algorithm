@@ -3,8 +3,8 @@
 using namespace std;
 
 int n;
-int arr[100000];
-int dp[100000004];
+int arr[100005];
+int dp[100005];
 
 int main() {
     cin >> n;
