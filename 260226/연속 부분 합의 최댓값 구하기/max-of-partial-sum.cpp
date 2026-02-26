@@ -12,7 +12,7 @@ int main() {
         cin >> arr[i];
         dp[i] = INT_MIN;
     }
-    dp[1] = arr[1]*2;
+    dp[1] = arr[1];
     for(int i = 2 ; i <= n ; i++)
     {
         dp[i] = max(dp[i-1] + arr[i], arr[i]);
