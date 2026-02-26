@@ -17,8 +17,8 @@ int main() {
     {
         dp[i] = max(dp[i-1] + arr[i], arr[i]);
     }
-    int ans = INT_MIN;
-    for(int i = 1 ; i <= n ; i++)
+    int ans = dp[1];
+    for(int i = 2 ; i <= n ; i++)
     {
         // cout << dp[i]<<" ";
         ans = max(ans,dp[i]);
