@@ -12,18 +12,20 @@ int main() {
     cin >> n >> k;
     for (int i = 0; i < n; i++) {
         cin >> arr[i];
-        um[arr[i]]++;
     }
     int cnt = 0 ;
     for(int i = 0 ; i < n ; i++)
     {
+        
         if(um.find(k-arr[i]) != um.end())
         {
-            cnt++;
+            cnt += um[k-arr[i]];
         }
+
+        um[arr[i]]++;
     }
 
-    cout << cnt/2;
+    cout << cnt;
 
     // Please write your code here.
 
