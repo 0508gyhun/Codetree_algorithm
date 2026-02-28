@@ -9,13 +9,14 @@ int arr2[100000];
 
 int main() {
     // cin >> n;
-    cin >> n;
+    cin >> n>>m;
     for (int i = 0; i < n; i++) {
         cin >> arr1[i];
         s.insert(arr1[i]);
     }
 
-    cin >> m;
+    // cin >> m;
+    
     for (int i = 0; i < m; i++) {
         cin >> arr2[i];
         if(s.find(arr2[i]) != s.end())
