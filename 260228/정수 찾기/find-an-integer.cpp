@@ -4,8 +4,8 @@ using namespace std;
 
 int n;
 int m;
-int a[100000];
-int b[100000];
+int arr1[100000];
+int arr2[100000];
 
 int main() {
     // cin >> n;
