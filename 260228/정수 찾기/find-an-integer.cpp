@@ -8,7 +8,7 @@ int a[100000];
 int b[100000];
 
 int main() {
-    cin >> n;
+    // cin >> n;
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> arr1[i];
