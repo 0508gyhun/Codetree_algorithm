@@ -24,7 +24,7 @@ int main() {
         {
             it--;
             ans++;
-            s.erase(a[i]);
+            s.erase(*it);
         }
         else
         {
