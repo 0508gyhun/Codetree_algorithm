@@ -18,7 +18,7 @@ int main() {
     for (int i = 0; i < m; i++) {
         cin >> query[i];
         auto it = s.upper_bound(query[i]);
-        if(it != s.end() && it != s.begin())
+        if( it != s.begin())
         {
             it--;
             cout <<*it<<endl;
