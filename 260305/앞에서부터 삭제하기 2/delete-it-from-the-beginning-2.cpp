@@ -28,7 +28,7 @@ int main() {
         }
         pq.pop(); // 가장 작은 숫자 제외
         int pqs = pq.size();
-        double total = 0;
+        long long total = 0;
         while(pq.size())
         {
             total += (-pq.top());
