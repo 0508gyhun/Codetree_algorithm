@@ -34,7 +34,7 @@ int main() {
             total += (-pq.top());
             pq.pop();
         }
-        ans = max(ans, total / pqs );
+        ans = max(ans, (double)total / pqs );
     }
     cout << fixed << setprecision(2) << ans ;
     
