@@ -6,8 +6,8 @@ using namespace std;
 int N;
 int arr[100000];
 priority_queue <int> pq;
-int sum, max_avg;
-
+int sum; 
+double max_avg;
 int main() {
     cin >> N;
     for (int i = 0; i < N; i++) {
@@ -22,7 +22,7 @@ int main() {
         pq.push(-arr[i]);
         sum+=arr[i];
 
-        double avg = (double) (sum - (-pq.top()) / N-i-1);
+        double avg = (double) (sum - (-pq.top())) / (N-i-1);
 
         if(max_avg <avg)
         {
