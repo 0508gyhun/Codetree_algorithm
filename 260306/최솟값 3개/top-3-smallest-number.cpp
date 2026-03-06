@@ -18,7 +18,7 @@ int main() {
         }
         else
         {   
-            int total = 1 ;
+            long long total = 1 ;
             int tmp[3] = {0,};
             for(int j = 0 ; j < 3; j++)
             {
