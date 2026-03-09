@@ -3,7 +3,8 @@
 using namespace std;
 
 int n, k;
-int arr[1000];
+int arr[1005];
+int psum[1005];
 
 int main() {
     cin >> n >> k;
@@ -18,11 +19,12 @@ int main() {
     }
     int cnt = 0;
 
-    for(int i = 0 ; i <= n ; i++)
-    {
-        for(int j = o; j <= n ; j++)
-        {
-            if(abs(psum[i] - psum[j]) == k) cnt++;
+    for(int i = 1 ; i <= n ; i++) {
+        for(int j = 0; j < i ; j++) { 
+            // 수정 3: abs() 제거
+            if(psum[i] - psum[j] == k) {
+                cnt++;
+            }
         }
     }
     
