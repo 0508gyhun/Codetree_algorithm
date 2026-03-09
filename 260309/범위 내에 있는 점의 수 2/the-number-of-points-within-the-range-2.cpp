@@ -3,14 +3,14 @@
 using namespace std;
 
 int N, Q;
-int points[100004];
-int A[100004], B[100004];
-int arr[100004];
+int points[1000004];
+int A[1000004], B[1000004];
+int arr[1000004];
 int max_n = 0;
 int psum[100004];
 int main() {
     cin >> N >> Q;
-    fill(arr,arr+100004,1);
+    fill(arr,arr+1000004,1);
     for (int i = 0; i < N; i++) {
         cin >> points[i];
         arr[points[i]] = 0;
