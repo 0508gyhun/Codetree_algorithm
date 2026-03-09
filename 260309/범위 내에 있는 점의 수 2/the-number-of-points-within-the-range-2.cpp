@@ -6,6 +6,8 @@ int N, Q;
 int points[100000];
 int A[100000], B[100000];
 int arr[100004];
+int max_n = 0;
+int psum[100004];
 int main() {
     cin >> N >> Q;
     fill(arr,arr+100004,1);
@@ -17,11 +19,32 @@ int main() {
 
     for(int i = 0 ; i <= max_n ; i ++)
     {
-        cout << arr[i]<<" ";
+        // cout << arr[i]<<" ";
+    }
+    // cout << endl;
+    psum[0] = 0;
+    for(int i = 1 ; i <= max_n ; i ++)
+    {
+        psum[i] = psum[i-1]+arr[i];
+    }
+
+    for(int i = 0 ; i <= max_n ; i ++)
+    {
+        // cout << psum[i]<<" ";
     }
 
     for (int i = 0; i < Q; i++) {
         cin >> A[i] >> B[i];
+        if(A[i] < max_n)
+        {
+            int temp = B[i]- A[i] +1 - (psum[B[i]] - psum[A[i]-1]);
+            cout << temp << endl;
+        }
+        else
+        {
+            cout << 0 << endl;
+        }
+        
     }
 
     // Please write your code here.
