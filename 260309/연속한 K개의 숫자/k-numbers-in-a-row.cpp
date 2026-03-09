@@ -22,7 +22,7 @@ int main() {
     }
 
     int ans = INT_MAX;
-    for(int i = 1 ; i+K<= N ; i++)
+    for(int i = 1 ; i+K-1<= N ; i++)
     {
         ans = min(ans,psum[i+K-1] - psum[i-1]);
     }
