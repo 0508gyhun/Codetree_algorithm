@@ -3,7 +3,7 @@
 using namespace std;
 
 int n, k;
-int arr[100000];
+int arr[100004];
 int psum[100004];
 
 int main() {
