@@ -3,8 +3,8 @@
 using namespace std;
 
 int N, Q;
-int points[100000];
-int A[100000], B[100000];
+int points[100004];
+int A[100004], B[100004];
 int arr[100004];
 int max_n = 0;
 int psum[100004];
