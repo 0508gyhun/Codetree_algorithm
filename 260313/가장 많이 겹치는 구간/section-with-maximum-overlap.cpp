@@ -12,26 +12,24 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> x1[i] >> x2[i];
 
-        arr[x1[i]]++;
-        arr[x2[i]]--;
+        for(int j = x1[i] ; j <= x2[i] ; j++)
+        {
+            arr[j]++;
+        }
 
         mx = max(mx,x2[i]);
     }
-    int mxx = INT_MIN;
     
     // for(int i = 1 ; i <= mx; i++)
     // {   
     //     cout << arr[i]<< " ";
     // }
     // cout << endl;
+    int mxx = INT_MIN;
     for(int i = 1 ; i <= mx; i++)
     {   
-        int sum = 0;
-        for(int j = 1 ; j <= i ;j++)
-        {   
-            sum+=arr[j];
-        }
-        mxx = max(mxx,sum);
+        
+        mxx = max(mxx,arr[i]);
     }
     cout << mxx;
 
