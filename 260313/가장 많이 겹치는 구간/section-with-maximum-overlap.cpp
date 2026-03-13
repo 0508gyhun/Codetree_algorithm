@@ -17,7 +17,7 @@ int main() {
 
         mx = max(mx,x2[i]);
     }
-    int mxx = INT_MIN;
+    int mxx = 0;
     
     // for(int i = 1 ; i <= mx; i++)
     // {   
@@ -25,7 +25,7 @@ int main() {
     // }
     // cout << endl;
     int sum = 0;
-    for(int i = 1 ; i <= mx; i++)
+    for(int i = 1 ; i <= 200000; i++)
     {   
         sum += arr[i];
         
