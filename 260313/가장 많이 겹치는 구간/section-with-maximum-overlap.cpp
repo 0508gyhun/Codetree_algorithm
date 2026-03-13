@@ -5,7 +5,7 @@ using namespace std;
 
 int n;
 int x1[200004], x2[200004];
-int arr[100004];
+int arr[200004];
 int mx = INT_MIN;
 int main() {
     cin >> n;
@@ -25,7 +25,7 @@ int main() {
     // }
     // cout << endl;
     int sum = 0;
-    for(int i = 1 ; i <= 200000; i++)
+    for(int i = 1 ; i <= mx; i++)
     {   
         sum += arr[i];
         
