@@ -6,9 +6,9 @@ int n;
 long long x1[100004], x2[100004];
 long long arr[100004];
 //1000 000 000
-int mx = INT_MIN;
+long long mx = INT_MIN;
 long long ans = INT_MIN;
-long sum;
+long long sum;
 int main() {
     cin >> n;
     for (int i = 0; i < n; i++) {
