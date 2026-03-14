@@ -19,7 +19,7 @@ int main() {
         mx = max(mx,x2[i]);
     }
 
-    for(int i = 1 ; i <= mx ; i++)
+    for(long long i = 1 ; i <= mx ; i++)
     {
         sum+=arr[i];
         ans = max(ans,sum);
