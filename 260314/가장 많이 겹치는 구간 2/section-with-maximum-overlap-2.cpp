@@ -3,8 +3,8 @@
 using namespace std;
 
 int n;
-int x1[100004], x2[100004];
-int arr[100004];
+long long x1[100004], x2[100004];
+long long arr[100004];
 //1000 000 000
 int mx = INT_MIN;
 int ans = INT_MIN;
