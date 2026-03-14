@@ -4,24 +4,22 @@ using namespace std;
 
 int n;
 long long x1[100004], x2[100004];
-long long arr[100004];
 //1000 000 000
-long long mx = INT_MIN;
-long long ans = INT_MIN;
-long long sum;
+map <long long, int> mp;
 int main() {
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> x1[i] >> x2[i];
-        arr[x1[i]]++;
-        arr[x2[i]]--;
+        mp[x1[i]]++;
+        mp[x2[i]]--;
 
-        mx = max(mx,x2[i]);
     }
 
-    for(long long i = 1 ; i <= mx ; i++)
+    int ans = 0;
+    int sum = 0;
+    for(auto it : mp)
     {
-        sum+=arr[i];
+        sum+=it.second;
         ans = max(ans,sum);
     }
     cout << ans;
