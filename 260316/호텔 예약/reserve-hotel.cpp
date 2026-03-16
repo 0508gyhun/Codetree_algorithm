@@ -22,10 +22,14 @@ int main() {
     // set<int> seg;
     int sum = 0 ;
     int ans = -1;
+    int prev = -1;
     for(auto i : mp)
     {
+        
         sum += i.second;
+        if(prev == i.first) sum++;
         ans = max(ans,sum);
+        prev = i.first;
     }
 
     cout << ans;
