@@ -14,8 +14,8 @@ int main() {
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> s[i] >> e[i];
-        mp[s[i]]++;
-        mp[e[i]+1]--;
+        mp[s[i]-1]++;
+        mp[e[i]]--;
     }
 
     // sort(v.begin(), v.end());
