@@ -11,10 +11,11 @@ int main() {
         cin >> arr[i];
     }
 
-    int j = 1 ;
+    // int j = 1 ;
     int ans = 0;
     for(int i = 1 ; i <= n ;i++)
     {
+        int j = i;
         while(j+1 <= n && arr[i] + arr[j+1] <= m)
         {
             // cout <<i<<" "<<arr[i] <<" "<<j+1<<" "<<arr[j+1]<<endl;
@@ -22,7 +23,7 @@ int main() {
             j++;
         }
 
-        j = i+1;
+        // j = i+1;
         
     }
 
