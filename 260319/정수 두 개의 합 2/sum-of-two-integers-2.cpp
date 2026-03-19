@@ -3,7 +3,7 @@
 using namespace std;
 
 int n, m;
-int arr[100000];
+int arr[100004];
 
 int main() {
     cin >> n >> m;
@@ -17,10 +17,12 @@ int main() {
     {
         while(j+1 <= n && arr[i] + arr[j+1] <= m)
         {
-            // cout <<arr[i] <<" "<<arr[j+1]<<endl;
+            // cout <<i<<" "<<arr[i] <<" "<<j+1<<" "<<arr[j+1]<<endl;
             ans++;
             j++;
         }
+
+        j = i+1;
         
     }
 
