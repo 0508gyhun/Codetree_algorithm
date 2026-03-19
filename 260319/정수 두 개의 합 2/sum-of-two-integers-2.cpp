@@ -12,7 +12,7 @@ int main() {
         cin >> arr[i];
         v.push_back(arr[i]);
     }
-
+    sort(v.begin(), v.end());
     int left = 0;
     int right = n -1;
     int ans = 0;
