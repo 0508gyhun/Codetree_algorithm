@@ -1,32 +1,33 @@
 #include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int n, m;
 int arr[100004];
-
+vector<int> v;
 int main() {
     cin >> n >> m;
     for (int i = 1; i <= n; i++) {
         cin >> arr[i];
+        v.push_back(arr[i]);
     }
 
-    // int j = 1 ;
+    int left = 0;
+    int right = n -1;
     int ans = 0;
-    for(int i = 1 ; i <= n ;i++)
+    while(left < right)
     {
-        int j = i;
-        while(j+1 <= n && arr[i] + arr[j+1] <= m)
+        if(v[left] + v[right] <= m)
         {
-            // cout <<i<<" "<<arr[i] <<" "<<j+1<<" "<<arr[j+1]<<endl;
-            ans++;
-            j++;
+            ans+=(right - left);
+            left++;
         }
-
-        // j = i+1;
-        
+        else {
+            right--;
+        }
     }
-
+    
     cout << ans;
 
     // Please write your code here.
