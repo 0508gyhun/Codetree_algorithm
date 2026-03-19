@@ -17,10 +17,11 @@ int main() {
     {
         while(j+1 <= n && arr[i] + arr[j+1] <= m)
         {
+            // cout <<arr[i] <<" "<<arr[j+1]<<endl;
             ans++;
             j++;
         }
-        i++;
+        
     }
 
     cout << ans;
